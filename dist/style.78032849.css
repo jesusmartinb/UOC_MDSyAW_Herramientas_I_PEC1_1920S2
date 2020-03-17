@@ -1,0 +1,16 @@
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom, #bada55, #c0ffee);
+    color: rebeccapurple;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+}
+
+.grid-item {
+    background-color: rgb(243, 228, 16);
+}
+
+/*# sourceMappingURL=/style.78032849.css.map */
