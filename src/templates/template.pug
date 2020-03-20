@@ -1,0 +1,38 @@
+include ../config/config
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        block title
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Gupter:400,700%7cSource+Sans+Pro:300i,400,700&display=swap")
+        link(rel="stylesheet", href="../css/style.css")
+    body
+        a(class="no-visible", href="#main") Saltar al contenido principal
+    header.header
+        i.fas.fa-bars.icon-menu.burguer-boton#boton-menu
+        block header
+    .subheader
+        .subheader__logo
+            img(src="../../src/images/logo.gif", alt="Logotipo")
+        .subheader__titulo
+            h2 Desarrollo Web
+        .subheader__menu
+        nav(class="menu", aria-label="Menú principal del sitio")
+            ul
+                -let i = 0
+                while i < menus.length
+                    li
+                        +enlace(hrefes[i],menus[i])
+                    -i++
+    main.main#main
+        block main
+    footer.footer
+        .footer__subscribe
+            h4 Subscribete
+            p Consigue los últimos artículos
+            form(action="")
+                input(type="email", name="subscribe", id="subscribe", placeholder="Tu e-mail")
+                input(type="submit", value="Subscribirme")
+    script(src="../js/index.js")
