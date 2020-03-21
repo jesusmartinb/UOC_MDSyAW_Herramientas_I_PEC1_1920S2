@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm-run-all clean parcel:dev",
     "build": "npm-run-all clean parcel:build",
-    "parcel:dev": "parcel ./src/pages/**/*.pug",
-    "parcel:build": "parcel build ./src/pages/**/*.pug",
+    "parcel:dev": "parcel ./src/pages/*.pug",
+    "parcel:build": "parcel build ./src/pages/*.pug",
     "clean": "rimraf dist .cache .cache-loader"
   },
   "author": "Jesus Martin Blanco",
