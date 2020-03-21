@@ -35,8 +35,8 @@ body {
   justify-content: center;
   align-items: center;
 
-  & svg, i {
-    color: var(--fondo);
+  & svg, & i {
+    color: var(--contraste);
     display: block;
     width: 4rem;
     height: 4rem;
