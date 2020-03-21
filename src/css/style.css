@@ -35,7 +35,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  & svg.icon-menu {
+  & svg {
     color: var(--fondo);
     display: block;
     width: 4rem;
