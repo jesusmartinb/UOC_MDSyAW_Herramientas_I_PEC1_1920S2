@@ -35,7 +35,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  & svg.fa-bars.icon-menu {
+  & .fa-bars.icon-menu {
     color: var(--fondo);
     display: block;
     width: 4rem;
