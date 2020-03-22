@@ -1,0 +1,9 @@
+mixin caja(fa,titulo,contenido)
+    .caja
+        .caja__fa: i(class=fa)
+        .caja__contenido
+            h3= titulo
+            p= contenido
+            a.boton Leer más
+mixin enlace(hrefes,menus)
+    a(href=`${hrefes}`)= menus
