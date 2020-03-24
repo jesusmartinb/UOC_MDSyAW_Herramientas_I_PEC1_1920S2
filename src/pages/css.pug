@@ -1,12 +1,23 @@
 extends ../templates/template
 block title
-  title= titles[0]
+  title= titles[2]
 block header
-  h1 Desarrollo Web
-  p Como construir una web
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = 'css'
 block main
-  section.grid
-    +caja('fab fa-html5',menus[1],'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nostrum corrupti, eum facilis eligendi voluptatibus provident labore ipsam!')
-    +caja('fab fa-css3-alt',menus[2],'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nostrum corrupti, eum facilis eligendi voluptatibus provident labore ipsam!')
-    +caja('fab fa-js-square',menus[3],'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nostrum corrupti, eum facilis eligendi voluptatibus provident labore ipsam!')
-    +caja('fas fa-tools',menus[4],'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nostrum corrupti, eum facilis eligendi voluptatibus provident labore ipsam!')
+  main.css#main
+    nav(class="migas", aria-label="Navegación secundaria")
+      ul
+        li
+          a(href="index.html") Inicio
+            //- i(class="fas fa-home")
+        li CSS
+    h2 CSS
+    p CSS es un conjunto de reglas que nos permitirá describir cómo se mostrará la página web en la pantalla.
+    section.grid
+      +cajacategoria(titulo[4],'El CSS (Cascading Style Sheets, hojas de estilo en cascada) permite aplicar estilos y dar forma a nuestro contenido HTML. Este artículo explica qué es CSS con un ejemplo de sintaxis sencilla, y también cubre algunos términos clave sobre el lenguaje.',temas[4])
+      +cajacategoria(titulo[5],'En este contenido veremos cómo funcionan la cascada y la herencia, dos de los mecanismos fundamentales de CSS. A la hora de elegir a qué partes de nuestro HTML queremos aplicar una regla CSS tenemos una gran variedad de selectores para elegir.',temas[5])
+      +cajacategoria(titulo[6],'Trabajaremos como dar estilos a los textos , las listas y los enlaces mediante CSS, de modo que podamos empezar a dar un poco de forma al contenido. También veremos cómo utilizar diferentes fuentes y sus diferentes formatos.',temas[6])
+      +cajacategoria(titulo[7],'Empezamos a adentrar en la base de la maquetación de una página web (el modelo de cajas). Una vez tengamos claro este modelo, podremos ver cómo dar forma a los fondos y los bordes de las cajas, y cómo gestionar el overflow, es decir, cuando hay más contenido de lo que cabe en el espacio asignado a una caja.',temas[7])
+      +cajacategoria(titulo[8],'Trabajaremos los fundamentos de la maquetación web viendo los distintos sistemas de posicionado que el CSS moderno nos ofrece. Además, veremos los fundamentos del RWD (Responsive Web Design) o diseño responsivo, que nos permite maquetar el mismo contenido para distintos tamaños de pantalla y/o dispositivos.',temas[8])

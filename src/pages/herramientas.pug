@@ -1,0 +1,22 @@
+extends ../templates/template
+block title
+  title= titles[4]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = 'herramientas'
+block main
+  main.herramientas#main
+    nav(class="migas", aria-label="Navegación secundaria")
+      ul
+        li
+          a(href="index.html") Inicio
+            //- i(class="fas fa-home")
+        li Herramientas
+    h2 Herramientas
+    p Durante los primeros años del desarrollo web, el análisis del código y de posibles errores se tenía que hacer manualmente. Si bien algunos navegadores incorporaban una consola de JavaScript, no fue hasta la aparición de la extensión Firebug para el navegador Firefox, en 2006, que los navegadores dispusieron de herramientas que permitían inspeccionar y depurar el código HTML, CSS y JavaScript.
+    section.grid
+      +cajacategoria(titulo[18],'En este módulo conocemos el funcionamiento del inspector, del editor de estilos y de las herramientas para diseño responsive, tres de las herramientas básicas que conforman las herramientas para desarrolladores más habituales de los navegadores.',temas[18])
+      +cajacategoria(titulo[19],'Si alguna vez ha desarrollado el front-end de una página web habréis trabajado con un editor de texto editando ficheros HTML, CSS y JavaScript. Actualmente los desarrolladores web utilizamos herramientas algo más complejas que el simple editor de texto.',temas[19])
+      +cajacategoria(titulo[20],'Descubriremos cómo gestionar adecuadamente recursos visuales como imágenes y formas, y como dotar nuestras webs y aplicaciones web de cierta vitalidad y responsividad a través de animaciones.',temas[20])
+      +cajacategoria(titulo[21],'Entenderemos qué significa rendimiento en una aplicación front-end, y descubriremos cuáles son las herramientas más adecuadas para medir las métricas críticas.',temas[21])

@@ -1,12 +1,27 @@
 extends ../templates/template
 block title
-  title= titles[0]
+  title= titles[3]
 block header
-  h1 Desarrollo Web
-  p Como construir una web
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = 'javascript'
 block main
-  section.grid
-    +caja('fab fa-html5',menus[1],'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nostrum corrupti, eum facilis eligendi voluptatibus provident labore ipsam!')
-    +caja('fab fa-css3-alt',menus[2],'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nostrum corrupti, eum facilis eligendi voluptatibus provident labore ipsam!')
-    +caja('fab fa-js-square',menus[3],'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nostrum corrupti, eum facilis eligendi voluptatibus provident labore ipsam!')
-    +caja('fas fa-tools',menus[4],'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium nostrum corrupti, eum facilis eligendi voluptatibus provident labore ipsam!')
+  main.javascript#main
+    nav(class="migas", aria-label="Navegación secundaria")
+      ul
+        li
+          a(href="index.html") Inicio
+            //- i(class="fas fa-home")
+        li JavaScript
+    h2 JavaScript
+    p JavaScript es un lenguaje de scripting multiplataforma y orientado a objetos. Es un lenguaje pequeño y liviano. Dentro de un ambiente de host, JavaScript puede conectarse a los objetos de su ambiente y proporcionar control programático sobre ellos.
+    section.grid
+      +cajacategoria(titulo[9],'JavaScript contiene una librería estándar de objetos, tales como  Array, Date, y Math, y un conjunto central de elementos del lenguaje, tales como operadores, estructuras de control, y sentencias.',temas[9])
+      +cajacategoria(titulo[10],'Aunque ya hemos estado haciendo operaciones con JavaScript, ha llegado el momento de hacer un recorrido por todos los operadores que podemos encontrar en JavaScript. También repasaremos que es una expresión y veremos algunas expresiones particulares.',temas[10])
+      +cajacategoria(titulo[11],'Ha llegado el momento de crearnos un entorno de trabajo que nos permita guardar fácilmente nuestros ejercicios en nuestro ordenador y probarlos directamente sobre el navegador sin ninguna web por en medio.',temas[11])
+      +cajacategoria(titulo[12],'En este capítulo se tratan dos temas. Por un lado las estructuras de control condicionales. Por el otro el control de errores.',temas[12])
+      +cajacategoria(titulo[13],'Los bucles ofrecen una manera rápida y sencilla de hacer algo repetitivamente.',temas[13])
+      +cajacategoria(titulo[14],'Podemos definir las funciones como trozos de código a los que ponemos un nombre para que nos sea más fácil reutilizarlos. Evidentemente es más complicado y, sobre todo, más completo que eso, pero como idea básica nos puede servir.',temas[14])
+      +cajacategoria(titulo[15],'En este apartado trabajaremos los temas números, fechas y textos.',temas[15])
+      +cajacategoria(titulo[16],'Suele pasar que las traducciones al español varían según las preferencias del traductor. Así, Array, se suele traducir cómo Matriz, cómo tabla o cómo Vector dependiendo del traductor.',temas[16])
+      +cajacategoria(titulo[17],'Los objetos son una estructura de datos común en muchos lenguajes de programación. Nos permiten programar tratando la información de una manera similar a cómo la tratamos en el mundo real.',temas[17])

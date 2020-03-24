@@ -1,9 +1,16 @@
-mixin caja(fa,titulo,contenido)
-    .caja
-        .caja__fa: i(class=fa)
-        .caja__contenido
-            h3= titulo
-            p= contenido
-            a.boton Leer más
+mixin caja(fa,titulo,contenido,hrefes)
+  .caja
+    .caja__fa: i(class=fa)
+    .caja__contenido
+      h3= titulo
+      p= contenido
+      a(href=`${hrefes}`, class="boton") Leer más
 mixin enlace(hrefes,menus)
-    a(href=`${hrefes}`)= menus
+  a(href=`${hrefes}`)= menus
+mixin cajacategoria(titulo,contenido,temas)
+  .caja
+    .caja__titulo
+      h3= titulo
+    .caja__contenido
+      p= contenido
+      a(href=`${temas}`, class="boton") Artículos

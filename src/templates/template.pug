@@ -15,28 +15,28 @@ html(lang="es")
         block header
     .subheader
         .subheader__logo
-            img(src="./images/logo.gif", alt="Logotipo")
+            a(href="index.html")
+                img(src="./images/logo.gif", alt="Logotipo")
         .subheader__titulo
             h2 Desarrollo Web
-        .subheader__menu
-            nav(class="menu", aria-label="Menú principal del sitio")
-                ul
-                    -let i = 0
-                    while i < menus.length
-                        if menus[i].toLowerCase() == active
-                            li(class="active")
-                                +enlace(hrefes[i],menus[i])
-                        else
-                            li
-                                +enlace(hrefes[i],menus[i])
-                        -i++
+        nav(class="subheader__menu menu", aria-label="Menú principal del sitio")
+            ul
+                -let i = 0
+                while i < menus.length
+                    if menus[i].toLowerCase() == active
+                        li(class="active")
+                            +enlace(hrefes[i],menus[i])
+                    else
+                        li
+                            +enlace(hrefes[i],menus[i])
+                    -i++
     block main
     footer.footer
         .footer__subscribe
             h4 Subscribete
             p Consigue los últimos artículos
         .footer__form
-            form(action="")
+            form
                 input(type="email", name="subscribe", id="subscribe", placeholder="Tu e-mail")
                 input(type="submit", value="Subscribirme")
     script(src="./js/index.js")
