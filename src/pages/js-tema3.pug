@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[16]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.javascript#main
+    +migastemas(hrefes[3],menus[3],titulo[11])
+    h2= titulo[11]
+    p Ha llegado el momento de crearnos un entorno de trabajo que nos permita guardar fácilmente nuestros ejercicios en nuestro ordenador y probarlos directamente sobre el navegador sin ninguna web por en medio.

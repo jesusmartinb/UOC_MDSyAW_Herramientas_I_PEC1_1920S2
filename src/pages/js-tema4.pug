@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[17]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.javascript#main
+    +migastemas(hrefes[3],menus[3],titulo[12])
+    h2= titulo[12]
+    p En este capítulo se tratan dos temas. Por un lado las estructuras de control condicionales. Por el otro el control de errores.

@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[7]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.html#main
+    +migastemas(hrefes[1],menus[1],titulo[2])
+    h2= titulo[2]
+    p Este módulo nos introduce en el marcado de tablas HTML, incluyendo los conceptos básicos, como son filas y celdas, encabezados, o bien hacer que las celdas abarquen varias filas y columnas.

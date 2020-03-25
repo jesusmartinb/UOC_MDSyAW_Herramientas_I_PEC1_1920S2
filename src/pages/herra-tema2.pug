@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[24]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.herramientas#main
+    +migastemas(hrefes[4],menus[4],titulo[19])
+    h2= titulo[19]
+    p Si alguna vez ha desarrollado el front-end de una página web habréis trabajado con un editor de texto editando ficheros HTML, CSS y JavaScript. Actualmente los desarrolladores web utilizamos herramientas algo más complejas que el simple editor de texto.

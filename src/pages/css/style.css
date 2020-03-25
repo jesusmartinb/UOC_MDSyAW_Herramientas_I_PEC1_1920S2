@@ -245,6 +245,52 @@ nav li.active {
   color: var(--active);
 }
 
+.migas ul {
+  display: block;
+  border: none;
+  margin-bottom: 0;
+  width: auto;
+  text-align: left;
+
+  & li {
+    display: inline-block;
+    border: none;
+    font-size: 1.6rem;
+    padding: .8rem;
+
+    & a {
+      position: relative;
+
+      &::after {
+        content: '';
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 8px solid var(--contraste);
+        position: absolute;
+        right: -14px;
+        top: 3px;
+        z-index: 1;
+      }
+
+      & svg {
+        padding-left: .3rem;
+      }
+    }
+
+  }
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  padding: 1rem 2rem;
+  text-align: center;
+  max-width: 119rem;
+  margin: 0 auto;
+}
+
 .grid {
     display: grid;
     padding: 0;
@@ -276,6 +322,9 @@ nav li.active {
       width: 86%;
       margin: 1.8rem;
       transition: transform 1s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       @media (--small) {
         width: 84%;
@@ -300,18 +349,23 @@ nav li.active {
         }
       }
 
-      & .caja__contenido {
+      & .caja__titulo {
         & h3 {
+          margin-top: 1rem;
           font-family: 'Gupter', serif;
           font-size: 2.6rem;
           text-align: center;
         }
+      }
 
+      & .caja__contenido {
         & p {
           text-align: center;
           padding: 1rem;
         }
+      }
 
+      & .caja__boton {
         & .boton {
           display: block;
           width: 12rem;

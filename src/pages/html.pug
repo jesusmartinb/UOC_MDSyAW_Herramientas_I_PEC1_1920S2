@@ -7,16 +7,11 @@ block header
   -let active = 'html'
 block main
   main.html#main
-    nav(class="migas", aria-label="Navegación secundaria")
-      ul
-        li
-          a(href="index.html") Inicio
-            //- i(class="fas fa-home")
-        li HTML
+    +migas(menus[1])
     h2 HTML
     p HTML es el lenguaje de marcado que usaremos para definir el contenido y la estructura de las páginas web.
     section.grid
-      +cajacategoria(titulo[0],'Si queremos hacer una página web que siga los estándares, que sea fácilmente actualizable, localizable por los buscadores... deberemos usar una combinación de HTML y CSS. Por ello el bloque de contenido que trabajaremos en esta unidad explica los fundamentos de ambos lenguajes.',temas[0])
-      +cajacategoria(titulo[1],'En la primera unidad hemos aprendido a crear nuestras primeras páginas web y aplicarles estilos. Pero existen todavía bastantes elementos HTML y, sobre todo, reglas CSS y maneras de aplicarlas, que no conocemos. Sigamos, pues, nuestro camino.',temas[1])
+      +cajacategoria(titulo[0],'Si queremos hacer una página web que siga los estándares, que sea fácilmente actualizable, localizable por los buscadores... deberemos usar una combinación de HTML y CSS. Por ello el bloque de contenido que trabajaremos en esta unidad explica los fundamentos del lenguaje HTML.',temas[0])
+      +cajacategoria(titulo[1],'En la primera unidad hemos aprendido a crear nuestras primeras páginas web y aplicarles estilos. Pero existen todavía bastantes elementos HTML, que no conocemos. Sigamos, pues, nuestro camino.',temas[1])
       +cajacategoria(titulo[2],'Este módulo nos introduce en el marcado de tablas HTML, incluyendo los conceptos básicos, como son filas y celdas, encabezados, o bien hacer que las celdas abarquen varias filas y columnas.',temas[2])
       +cajacategoria(titulo[3],'Los formularios HTML son una herramienta muy poderosa para interactuar con los usuarios,  aunque no siempre es obvio cómo usarlos en todo su potencial. En los siguientes artículos, cubriremos  los aspectos fundamentales de los formularios HTML.',temas[3])

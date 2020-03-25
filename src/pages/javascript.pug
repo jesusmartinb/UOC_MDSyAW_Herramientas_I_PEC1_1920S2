@@ -7,12 +7,7 @@ block header
   -let active = 'javascript'
 block main
   main.javascript#main
-    nav(class="migas", aria-label="Navegación secundaria")
-      ul
-        li
-          a(href="index.html") Inicio
-            //- i(class="fas fa-home")
-        li JavaScript
+    +migas(menus[3])    
     h2 JavaScript
     p JavaScript es un lenguaje de scripting multiplataforma y orientado a objetos. Es un lenguaje pequeño y liviano. Dentro de un ambiente de host, JavaScript puede conectarse a los objetos de su ambiente y proporcionar control programático sobre ellos.
     section.grid

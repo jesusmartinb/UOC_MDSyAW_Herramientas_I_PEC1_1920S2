@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[10]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.css#main
+    +migastemas(hrefes[2],menus[2],titulo[5])
+    h2= titulo[5]
+    p En este contenido veremos cómo funcionan la cascada y la herencia, dos de los mecanismos fundamentales de CSS. A la hora de elegir a qué partes de nuestro HTML queremos aplicar una regla CSS tenemos una gran variedad de selectores para elegir.

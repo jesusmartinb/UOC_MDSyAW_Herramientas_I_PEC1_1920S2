@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[26]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.herramientas#main
+    +migastemas(hrefes[4],menus[4],titulo[21])
+    h2= titulo[21]
+    p Entenderemos qué significa rendimiento en una aplicación front-end, y descubriremos cuáles son las herramientas más adecuadas para medir las métricas críticas.

@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[6]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.html#main
+    +migastemas(hrefes[1],menus[1],titulo[1])
+    h2= titulo[1]
+    p En la primera unidad hemos aprendido a crear nuestras primeras páginas web y aplicarles estilos. Pero existen todavía bastantes elementos HTML, que no conocemos. Sigamos, pues, nuestro camino.

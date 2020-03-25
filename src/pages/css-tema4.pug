@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[12]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.css#main
+    +migastemas(hrefes[2],menus[2],titulo[7])
+    h2= titulo[7]
+    p Empezamos a adentrar en la base de la maquetación de una página web (el modelo de cajas). Una vez tengamos claro este modelo, podremos ver cómo dar forma a los fondos y los bordes de las cajas, y cómo gestionar el overflow, es decir, cuando hay más contenido de lo que cabe en el espacio asignado a una caja.

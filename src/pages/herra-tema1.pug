@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[23]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.herramientas#main
+    +migastemas(hrefes[4],menus[4],titulo[18])
+    h2= titulo[18]
+    p En este módulo conocemos el funcionamiento del inspector, del editor de estilos y de las herramientas para diseño responsive, tres de las herramientas básicas que conforman las herramientas para desarrolladores más habituales de los navegadores.

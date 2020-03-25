@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[15]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.javascript#main
+    +migastemas(hrefes[3],menus[3],titulo[10])
+    h2= titulo[10]
+    p Aunque ya hemos estado haciendo operaciones con JavaScript, ha llegado el momento de hacer un recorrido por todos los operadores que podemos encontrar en JavaScript. También repasaremos que es una expresión y veremos algunas expresiones particulares.

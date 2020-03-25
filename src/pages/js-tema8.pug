@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[21]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.javascript#main
+    +migastemas(hrefes[3],menus[3],titulo[16])
+    h2= titulo[16]
+    p Suele pasar que las traducciones al español varían según las preferencias del traductor. Así, Array, se suele traducir cómo Matriz, cómo tabla o cómo Vector dependiendo del traductor.

@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[25]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.herramientas#main
+    +migastemas(hrefes[4],menus[4],titulo[20])
+    h2= titulo[20]
+    p Descubriremos cómo gestionar adecuadamente recursos visuales como imágenes y formas, y como dotar nuestras webs y aplicaciones web de cierta vitalidad y responsividad a través de animaciones.

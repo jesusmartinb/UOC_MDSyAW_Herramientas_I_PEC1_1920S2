@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[18]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.javascript#main
+    +migastemas(hrefes[3],menus[3],titulo[13])
+    h2= titulo[13]
+    p Los bucles ofrecen una manera rápida y sencilla de hacer algo repetitivamente.

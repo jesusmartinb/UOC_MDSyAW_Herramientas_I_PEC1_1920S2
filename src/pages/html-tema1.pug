@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[5]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.html#main
+    +migastemas(hrefes[1],menus[1],titulo[0])
+    h2= titulo[0]
+    p Si queremos hacer una página web que siga los estándares, que sea fácilmente actualizable, localizable por los buscadores... deberemos usar una combinación de HTML y CSS. Por ello el bloque de contenido que trabajaremos en esta unidad explica los fundamentos del lenguaje HTML.

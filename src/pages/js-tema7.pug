@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[20]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.javascript#main
+    +migastemas(hrefes[3],menus[3],titulo[15])
+    h2= titulo[15]
+    p En este apartado trabajaremos los temas números, fechas y textos.

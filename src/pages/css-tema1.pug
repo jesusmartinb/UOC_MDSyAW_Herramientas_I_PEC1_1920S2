@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[9]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.css#main
+    +migastemas(hrefes[2],menus[2],titulo[4])
+    h2= titulo[4]
+    p El CSS (Cascading Style Sheets, hojas de estilo en cascada) permite aplicar estilos y dar forma a nuestro contenido HTML. Este artículo explica qué es CSS con un ejemplo de sintaxis sencilla, y también cubre algunos términos clave sobre el lenguaje.

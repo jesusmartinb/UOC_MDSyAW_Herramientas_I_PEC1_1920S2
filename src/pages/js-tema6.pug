@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[19]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.javascript#main
+    +migastemas(hrefes[3],menus[3],titulo[14])
+    h2= titulo[14]
+    p Podemos definir las funciones como trozos de código a los que ponemos un nombre para que nos sea más fácil reutilizarlos. Evidentemente es más complicado y, sobre todo, más completo que eso, pero como idea básica nos puede servir.

@@ -1,0 +1,12 @@
+extends ../templates/template
+block title
+  title= titles[8]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.html#main
+    +migastemas(hrefes[1],menus[1],titulo[3])
+    h2= titulo[3]
+    p Los formularios HTML son una herramienta muy poderosa para interactuar con los usuarios,  aunque no siempre es obvio cómo usarlos en todo su potencial. En los siguientes artículos, cubriremos  los aspectos fundamentales de los formularios HTML.
