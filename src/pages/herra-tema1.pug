@@ -6,7 +6,10 @@ block header
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main.herramientas#main
+  main.herramientas-tema1#main
     +migastemas(hrefes[4],menus[4],titulo[18])
     h2= titulo[18]
     p En este módulo conocemos el funcionamiento del inspector, del editor de estilos y de las herramientas para diseño responsive, tres de las herramientas básicas que conforman las herramientas para desarrolladores más habituales de los navegadores.
+    section.grid-tema
+      +cajatema(srcs[32],'El Inspector','El Inspector',contenidostema[32],articulos[32])
+      +cajatema(srcs[33],'Herramientas para Diseño Responsive','Herramientas para Diseño Responsive',contenidostema[33],articulos[33])

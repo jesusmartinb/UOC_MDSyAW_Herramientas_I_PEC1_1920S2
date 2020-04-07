@@ -6,7 +6,10 @@ block header
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main.herramientas#main
+  main.herramientas-tema3#main
     +migastemas(hrefes[4],menus[4],titulo[20])
     h2= titulo[20]
     p Descubriremos cómo gestionar adecuadamente recursos visuales como imágenes y formas, y como dotar nuestras webs y aplicaciones web de cierta vitalidad y responsividad a través de animaciones.
+    section.grid-tema
+      +cajatema(srcs[36],'Optimización de Imágenes','Optimización de Imágenes',contenidostema[36],articulos[36])
+      +cajatema(srcs[37],'Animación Web en CSS','Animación Web en CSS',contenidostema[37],articulos[37])

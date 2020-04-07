@@ -6,7 +6,10 @@ block header
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main.html#main
+  main.html-tema2#main
     +migastemas(hrefes[1],menus[1],titulo[1])
     h2= titulo[1]
     p En la primera unidad hemos aprendido a crear nuestras primeras páginas web y aplicarles estilos. Pero existen todavía bastantes elementos HTML, que no conocemos. Sigamos, pues, nuestro camino.
+    section.grid-tema
+      +cajatema(srcs[2],Hipervínculos,'Hipervínculos',contenidostema[2],articulos[2])
+      +cajatema(srcs[3],'Marcado de Texto','Marcado de Texto',contenidostema[3],articulos[3])

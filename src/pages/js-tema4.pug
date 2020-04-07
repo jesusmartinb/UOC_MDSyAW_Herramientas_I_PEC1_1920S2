@@ -6,7 +6,10 @@ block header
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main.javascript#main
+  main.javascript-tema4#main
     +migastemas(hrefes[3],menus[3],titulo[12])
     h2= titulo[12]
     p En este capítulo se tratan dos temas. Por un lado las estructuras de control condicionales. Por el otro el control de errores.
+    section.grid-tema
+      +cajatema(srcs[22],'Control de Flujo Condicionales','Control de Flujo Condicionales',contenidostema[21],articulos[21])
+      +cajatema(srcs[21],'Sentencias de Manejo de Excepciones','Sentencias de Manejo de Excepciones',contenidostema[22],articulos[22])

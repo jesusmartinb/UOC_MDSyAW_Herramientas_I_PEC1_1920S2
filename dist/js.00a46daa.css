@@ -121,6 +121,14 @@ body {
 
   }
 
+@media only screen and (min-width: 1200px) {
+
+.subheader {
+    grid-template-columns: 1fr 3fr 6fr
+
+}
+  }
+
 .subheader .subheader__logo {
     width: 15rem;
     margin: 0 auto
@@ -157,9 +165,11 @@ body {
 @media only screen and (min-width: 1010px) {
 
 .subheader .subheader__titulo h2{
-      font-size: 2rem;
+      font-size: 2.6rem;
       margin-bottom: 0;
-      margin-top: 2rem
+      margin-top: 0;
+      padding: 0 2.5rem 0 1.5rem;
+      text-align: center
   }
 
     }
@@ -167,7 +177,9 @@ body {
 @media only screen and (min-width: 1200px) {
 
 .subheader .subheader__titulo h2{
-      font-size: 3.2rem
+      font-size: 3.2rem;
+      margin-top: 1rem;
+      text-align: left
   }
     }
 
@@ -530,6 +542,96 @@ p {
             background-color: var(--contraste);
             cursor: pointer;
           }
+
+.grid-tema {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%
+}
+
+.grid-tema .caja {
+    box-shadow: 0px 0px 4px #555;
+    box-shadow: 0px 0px 4px var(--fondo-footer);
+    width: 86%;
+    margin: 5rem auto;
+    transition: transform 1s
+  }
+
+@media only screen and (min-width: 1200px) {
+
+.grid-tema .caja {
+      max-width: 121rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr
+  }
+    }
+
+.grid-tema .caja .caja__imagen .caja__image {
+        width: 96%;
+        margin: 0 auto;
+        transition: transform 1s
+      }
+
+.grid-tema .caja .caja__imagen .caja__image img {
+          display: block;
+          max-width: 100%;
+          padding: 2rem;
+          margin: 0 auto;
+        }
+
+@media only screen and (min-width: 1200px) {
+
+.grid-tema .caja .caja__imagen {
+        display: flex;
+        align-items: center;
+        justify-content: center
+
+    }
+      }
+
+.grid-tema .caja:hover {
+      transform: scale(1.1)
+    }
+
+.grid-tema .caja:hover .caja__imagen .caja__image:hover{
+        transform: scale(1.1)
+      }
+
+@media only screen and (min-width: 730px) {
+
+.grid-tema .caja:hover .caja__imagen .caja__image:hover{
+          transform: scale(1)
+      }
+        }
+
+.grid-tema .caja .caja__textos .caja__titulo h3 {
+        margin-top: 1rem;
+        font-family: 'Gupter', serif;
+        font-size: 2.6rem;
+        text-align: center;
+      }
+
+.grid-tema .caja .caja__textos .caja__boton .boton {
+        display: block;
+        width: 12rem;
+        margin: 1rem auto;
+        padding: 1.6rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        background-color: #ccc;
+        background-color: var(--bgcactive);
+        border-bottom: none;
+        border-radius: .6rem
+      }
+
+.grid-tema .caja .caja__textos .caja__boton .boton:hover {
+          color: aliceblue;
+          color: var(--fondo);
+          background-color: skyblue;
+          background-color: var(--contraste);
+          cursor: pointer;
+        }
 
 
 /*# sourceMappingURL=/js.00a46daa.css.map */

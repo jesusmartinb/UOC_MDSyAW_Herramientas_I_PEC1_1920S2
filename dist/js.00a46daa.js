@@ -12571,7 +12571,7 @@ _fontawesomeSvgCore.dom.watch(); // Funcionalidad botón hamburgesa
 
 
 setTimeout(function () {
-  var movil = window.matchMedia('screen and (min-width: 100px) and (max-width: 723px)');
+  var movil = window.matchMedia('screen and (min-width: 100px) and (max-width: 730px)');
   var boton = document.querySelector('#boton-menu');
   var menu = document.querySelector('.menu');
   movil.addListener(validation);
@@ -12622,7 +12622,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61247" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51513" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

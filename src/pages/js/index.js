@@ -21,7 +21,7 @@ dom.watch();
 // Funcionalidad botón hamburgesa
 setTimeout(function () {
 
-    const movil = window.matchMedia('screen and (min-width: 100px) and (max-width: 723px)');
+    const movil = window.matchMedia('screen and (min-width: 100px) and (max-width: 730px)');
     const boton = document.querySelector('#boton-menu');
     const menu = document.querySelector('.menu');
 

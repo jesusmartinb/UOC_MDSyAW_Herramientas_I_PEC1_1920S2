@@ -6,7 +6,10 @@ block header
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main.herramientas#main
+  main.herramientas-tema2#main
     +migastemas(hrefes[4],menus[4],titulo[19])
     h2= titulo[19]
     p Si alguna vez ha desarrollado el front-end de una página web habréis trabajado con un editor de texto editando ficheros HTML, CSS y JavaScript. Actualmente los desarrolladores web utilizamos herramientas algo más complejas que el simple editor de texto.
+    section.grid-tema
+      +cajatema(srcs[34],'Los Gestores de Paquetes','Los Gestores de Paquetes',contenidostema[34],articulos[34])
+      +cajatema(srcs[35],'Los Module Bundlers','Los Module Bundlers',contenidostema[35],articulos[35])

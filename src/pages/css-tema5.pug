@@ -6,7 +6,10 @@ block header
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main.css#main
+  main.css-tema5#main
     +migastemas(hrefes[2],menus[2],titulo[8])
     h2= titulo[8]
     p Trabajaremos los fundamentos de la maquetación web viendo los distintos sistemas de posicionado que el CSS moderno nos ofrece. Además, veremos los fundamentos del RWD (Responsive Web Design) o diseño responsivo, que nos permite maquetar el mismo contenido para distintos tamaños de pantalla y/o dispositivos.
+    section.grid-tema
+      +cajatema(srcs[14],'Flexbox','Flexbox',contenidostema[14],articulos[14])
+      +cajatema(srcs[15],'Responsive Web Design','Responsive Web Design',contenidostema[15],articulos[15])

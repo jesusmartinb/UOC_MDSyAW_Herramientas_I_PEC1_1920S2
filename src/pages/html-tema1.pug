@@ -6,7 +6,10 @@ block header
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main.html#main
+  main.html-tema1#main
     +migastemas(hrefes[1],menus[1],titulo[0])
     h2= titulo[0]
     p Si queremos hacer una página web que siga los estándares, que sea fácilmente actualizable, localizable por los buscadores... deberemos usar una combinación de HTML y CSS. Por ello el bloque de contenido que trabajaremos en esta unidad explica los fundamentos del lenguaje HTML.
+    section.grid-tema
+      +cajatema(srcs[0],HTML5,'Comenzando con HTML5',contenidostema[0],articulos[0])
+      +cajatema(srcs[1],Metadatos,'Metadatos',contenidostema[1],articulos[1])

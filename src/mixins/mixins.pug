@@ -17,6 +17,22 @@ mixin cajacategoria(titulo,contenido,temas)
       p= contenido
     .caja__boton
       a(href=`${temas}`, class="boton") Artículos
+mixin cajatema(srcs,alts,titulo,contenidostema,articulos)
+  .caja
+    .caja__imagen
+      .caja__image
+        img(src=`${srcs}`, alt=`${alts}`)
+    .caja__textos
+      .caja__titulo
+        h3= titulo
+      .caja__fecha
+        p Fecha: 
+          time(datetime="2020-03-26") 26-3-2020
+      .caja__contenido
+        p Autor: Jesús Martín Blanco
+        p= contenidostema
+      .caja__boton
+        a(href=`${articulos}`, class="boton") Artículo
 mixin migas(menus)
   nav(class="migas", aria-label="Navegación secundaria")
     ul

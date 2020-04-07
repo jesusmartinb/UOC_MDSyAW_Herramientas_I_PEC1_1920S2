@@ -6,7 +6,10 @@ block header
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main.css#main
+  main.css-tema4#main
     +migastemas(hrefes[2],menus[2],titulo[7])
     h2= titulo[7]
     p Empezamos a adentrar en la base de la maquetación de una página web (el modelo de cajas). Una vez tengamos claro este modelo, podremos ver cómo dar forma a los fondos y los bordes de las cajas, y cómo gestionar el overflow, es decir, cuando hay más contenido de lo que cabe en el espacio asignado a una caja.
+    section.grid-tema
+      +cajatema(srcs[12],'El Modelo de Caja','El Modelo de Caja',contenidostema[12],articulos[12])
+      +cajatema(srcs[13],'Fondos y Bordes','Fondos y Bordes',contenidostema[13],articulos[13])
