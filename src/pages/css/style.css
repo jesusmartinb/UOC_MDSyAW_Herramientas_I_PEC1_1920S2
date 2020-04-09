@@ -56,7 +56,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 99999;
+  z-index: 9999;
   margin-right: -60px;
   transition: all .4s ease;
 
@@ -113,6 +113,7 @@ body {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+      z-index: 999;
 
       & .fa-arrow-left, & .fa-arrow-right {
         color: white;
@@ -143,7 +144,7 @@ body {
     position:fixed;
     left: .5rem;
     top: .5rem;
-    z-index: 4;
+    z-index: 99999;
     line-height: 4.5rem;
     text-align: center;
     font-size: 3rem;
@@ -162,13 +163,43 @@ body {
   }
 
   & h1 {
-    top: 38%;
-    transform: translateY(-38%);
+    top: 30%;
+    transform: translateY(-30%);
+
+    @media (--small) {
+      top: 35%;
+      transform: translateY(-35%);
+    }
+
+    @media (--medium) {
+      top: 40%;
+      transform: translateY(-40%);
+    }
+
+    @media (--big) {
+      top: 45%;
+      transform: translateY(-45%);
+    }
   }
 
   & p {
-    top: 57%;
-    transform: translateY(-57%);
+    top: 70%;
+    transform: translateY(-70%);
+
+    @media (--small) {
+      top: 65%;
+      transform: translateY(-65%);
+    }
+
+    @media (--medium) {
+      top: 60%;
+      transform: translateY(-60%);
+    }
+
+    @media (--big) {
+      top: 55%;
+      transform: translateY(-55%);
+    }
   }
 
 }
@@ -185,7 +216,7 @@ body {
     top: 0;
     display: grid;
     grid-template-columns: 1fr 2fr 7fr;
-    z-index: 10;
+    z-index: 99;
     margin-top: .8rem;
     margin-bottom: 1rem;
     padding-top: .6rem;
@@ -249,7 +280,7 @@ body {
     height: 100vh;
     margin-left: -100vw;
     transition: all 0.3s ease;
-    z-index: 3;
+    z-index: 9;
 
     @media (--medium) {
       position: initial;
@@ -272,6 +303,7 @@ body {
 
   & .menu.is-active {
     margin-left: 0;
+    z-index: 99990;
   }
 
   & ul {
