@@ -1,15 +1,18 @@
 {
   "name": "proyectoweb-pec1",
   "version": "1.0.0",
-  "description": "Proyecto web de HTML y CSS I PEC 1 M2 Workflow",
+  "description": "Proyecto web de Herramientas HTML y CSS I PEC 1 M2 Workflow",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npm-run-all clean parcel:dev",
-    "build": "npm-run-all clean parcel:build",
+    "build": "npm-run-all clean jpgheroresize jpgresize pngresize parcel:build",
     "parcel:dev": "parcel src/pages/*.pug --open",
     "parcel:build": "parcel build src/pages/*.pug",
-    "clean": "rimraf dist .cache .cache-loader"
+    "clean": "rimraf dist .cache .cache-loader",
+    "jpgheroresize": "mogrify -resize \"3840 >\" ./src/pages/images/hero*.jpg",
+    "jpgresize": "mogrify -resize \"1024 > \" ./src/pages/images/nh*.jpg",
+    "pngresize": "mogrify -resize \"1024 > \" ./src/pages/images/*.png"
   },
   "author": "Jesus Martin Blanco",
   "license": "MIT",

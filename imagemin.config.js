@@ -6,7 +6,7 @@ module.exports = {
 	},
 	"mozjpeg": {
 		"progressive": true,
-		"quality": 30
+		"quality": 20
 	},
 	"pngquant": {
 		"quality": [0.25, 0.5]
