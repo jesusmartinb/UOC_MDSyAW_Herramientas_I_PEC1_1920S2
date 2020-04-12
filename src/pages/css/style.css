@@ -207,7 +207,6 @@ body {
 
 .subheader {
   display: block;
-  /* width: 95%; */
   margin: 0 auto;
   text-align: center;
 
@@ -720,6 +719,13 @@ p {
   }
 
   & .contenido {
+    width: 96vw;
+
+    @media (--verybig){
+      max-width: 121rem;
+      margin: 0 auto;
+    }
+
     & dl {
       padding: 1rem 2rem;
 
@@ -750,7 +756,7 @@ p {
     }
 
     & ul, & ol {
-      margin-left: 6rem;
+      margin-left: 4rem;
       margin-bottom: 2rem;
     }
 
@@ -760,7 +766,7 @@ p {
     }
 
     & table {
-      margin-left: 6rem;
+      margin-left: 4rem;
       border-collapse: collapse;
       
       & th, & td {
@@ -774,6 +780,11 @@ p {
         font-style: italic;
         border-top: none;
       }
+    }
+
+    & a {
+      hyphens: auto;
+      word-wrap: break-word;
     }
   }
 
