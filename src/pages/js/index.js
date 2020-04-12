@@ -65,11 +65,11 @@ $(document).ready(function () {
 
         var mainOffsetTop = $('#main').offset().top;
 
-        if ($(window).scrollTop() >= mainOffsetTop) {
+        if ($(window).scrollTop() > mainOffsetTop) {
 
             btnVolverArriba.css('margin-right', 0);
 
-        }else if ($(window).scrollTop() <= mainOffsetTop/2){
+        }else if ($(window).scrollTop() <= mainOffsetTop){
 
             btnVolverArriba.css('margin-right', '-60px');
 
@@ -82,8 +82,11 @@ $(document).ready(function () {
     $('a.volver-arriba').on('click', function (e) {
         e.preventDefault();
 
+        var seccionOffsetTop = $('#main').offset().top
+
         if($(window).scrollTop() != 0) {
-            $('html, body').stop().animate({scrollTop: 0}, 1000);
+
+            $('html, body').stop().animate({scrollTop: seccionOffsetTop - 85}, 1000);
         }
     })
 

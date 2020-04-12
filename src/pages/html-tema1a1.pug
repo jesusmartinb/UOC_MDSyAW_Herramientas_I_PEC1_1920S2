@@ -1,0 +1,136 @@
+extends ../templates/template
+block title
+  title= titles[5]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.html-tema1a1#main
+    +migasarticulos(hrefes[1],menus[1],temas[0],titulo[0],tituloarticulo[0])
+    article.article
+      section.cabecera
+        .cabecera__titulo
+          h2= tituloarticulo[0]
+        .cabecera__imagen
+          .cabecera__image
+            img(src="images/autor1.jpg", alt="Imagen del Autor del Artículo")
+        .cabecera__textos
+          .cabecera__autor
+            p Autor: 
+              span.autor Jesús Martín
+          .cabecera__antiguedad
+            p Actualizado hace: 
+              span.tiempo 12 días
+      section.contenido
+        h3 Introducción
+        p 
+          abbr(title="Hipertext Markup Lenguage") HTML 
+          | Lenguaje de marcado de hipertexto no es un lenguaje de programación; Es un lenguaje de marcado utilizado para indicarle a su navegador cómo estructurar las páginas web que visita. Puede ser tan complicado o tan simple como el desarrollador web lo desee. 
+          abbr(title="Hipertext Markup Lenguage") HTML 
+          | consiste en una serie de elementos , que usted usa para encerrar, ajustar o marcar diferentes partes del contenido para que aparezca o actúe de cierta manera. Las etiquetas adjuntas pueden convertir un poco de contenido en un hipervínculo para vincular a otra página en la web, poner en cursiva las palabras, etc.
+        h3 Conceptos
+        dl
+          dt
+            abbr(title="Hipertext Markup Lenguage") HTML (Hipertext Markup Lenguage)
+          dd Lenguaje de Marcado de Hipertexto. A diferencia de otros lenguajes no esta compuesto por comandos e instrucciones sino por un conjunto de elementos formados por etiquetas que organizan y declaran el proposito del contenido del elemento.
+          dt Etiqueta de apertura.
+          dd Están constituidas por palabras clave del lenguaje y sus atributos ambos rodeados por un signo de < anterior y un signo > posterior.
+          dt Etiqueta de cierre.
+          dd Están constituidas por palabras clave del lenguaje rodeadas por los signos </ anterior y por el signo > posterior.
+          dt Elemento.
+          dd Esta constituido por un par de etiquetas de apertura y cierre con la misma palabra clave del lenguaje, y un contenido encerrado entre ambas. Los elementos también pueden ser vacíos, es decir, formados tan solo por una etiqueta de apertura y sin contenido. La mayoría de los elementos requieren de una etiqueta de apertura y otra de cierre.
+          dt Atributo.
+          dd Proveen información adicional sobre el elemento y son siempre declarados dentro de la etiqueta de apertura. Su sintaxis esta constituida por un nombre seguido de un signo de igualdad y entre comillas dobles el valor del atributo.
+        h3 Ejemplo
+        div(class="codigo")
+          pre
+            code.code
+              | &lt;!DOCTYPE HTML&gt;
+              | &lt;html lang="en"&gt;
+              |  &lt;head&gt;
+              |    &lt;title&gt;Documento HTML&lt;/title&gt;
+              |  &lt;/head&gt;
+              |  &lt;body&gt;
+              |    &lt;p&gt;Hello World&lt;/p&gt;
+              |  &lt;/body&gt;
+              | &lt;/html&gt;
+        h3 Consideraciones
+        p Los elementos pueden contener anidados otros elementos, teniendo en cuenta que el primer elemento que se abre debe ser el último elemento que se cierra, esto conforma una estructura jerarquica de tipo árbol, con un elemento raíz y diferentes elementos padres, hijos,...
+        p En general todos los elementos pueden ser anidados (contener o ser contenidos por otros elementos), existiendo algunos elementos estructurales como html, head o body que tienen asignado un lugar específico en el documento html, el resto es totalmente flexible.
+        p Aunque cada una de las etiquetas html define sus propios atributos, , encontramos algunos comunes a casi todas las etiquetas, dividiendose estos en 4 grupos atendiendo a su funcionalidad:
+        ul
+          li Atributos básicos o genéricos.
+          li Atributos de internacionalización.
+          li Atributos de eventos.
+          li Atributos de foco.
+        h4 Atributos genéricos.
+        table
+          thead
+            tr
+              th Atributo
+              th Descripción
+          tbody
+            tr
+              td class
+              td Establece la clase CSS que aplica los estilos a los elementos.
+            tr
+              td id
+              td Establece un identificador único para el elemento.
+            tr
+              td style
+              td Aplica de forma directa estilos CSS a un elemento.
+            tr
+              td name
+              td Útil cuando trabajamos con formularios.
+            tr
+              td title
+              td Establece el title del elemento mejorando su accesibilidad.
+        h4 Atributos de internacionalización o i18n.
+        p El atributo lang indica atraves de un código el idioma del elemento.
+        h4 Atributos de eventos.
+        p Se utilizan en las páginas web que incluyen código JavaScript, para realizar acciones dinámicas sobre los elementos de la página.
+        h4 Atributos de foco.
+        p Se denomina foco o focus, cuando un elemento del documento ha sido seleccionado. Cuando deja de estar seleccionado, se dice que "pierde el foco", y es el nuevo elemento seleccionado el que adquiere el foco.
+        h3 Referencias
+        ol
+          li
+            a(href="https://developer.mozilla.org", target="_blank") https://developer.mozilla.org
+          li
+            a(href="https://www.arkaitzgarro.com/xhtml/capitulo-3.html", target="_blank") https://www.arkaitzgarro.com/xhtml/capitulo-3.html
+          li
+            | El gran libro de HTML5, CSS3 & JavaScript. Gauchat, J.D. Marcombo. 2ª Edición 2014.
+        h3 Otros artículos sobre el tema
+        p
+          a(href="html-tema1a2.html") Metadatos
+      section.comentarios
+        .comentario__titulo
+            h3 Comentarios
+        .comentario__imagen
+          .comentario__image
+            img(src="images/comentarista1.jpg", alt="Imagen del comentarista")
+        .comentario__textos
+          .comentario__autor
+            p Escrito por: 
+              span.autor Sandra González
+          .comentario__antiguedad
+            p Actualizado hace: 
+              span.tiempo 3 días
+          .comentario__comentario
+            p Interesante artículo.
+        .comentario__formulario
+          h3 Deja un Comentario
+          form.formulario(action="")
+            fieldset
+              p.nota Todos los campos son obligatorios.
+              div.datos
+                label(for="nombre") Nombre: 
+                input(type="text", name="nombre", id="nombre", required)
+              div.datos
+                label(for="email") E-mail:  
+                input(type="email", name="email", id="email", required)
+              div
+                label(for="comentario", class="comenta") Comenta: 
+                textarea(name="comentario", rows="15")
+              div
+                button(type="submit", class="boton") Enviar

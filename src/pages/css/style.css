@@ -7,6 +7,7 @@
   --active: rgb(248, 127, 27);
   --bgcactive: #ccc;
   --font-base: 'Source Sans Pro', sans-serif;
+  --font-comentarios: 'Gupter', serif;
   --font-body: 2rem;
   --font-hero: 4rem;
 }
@@ -60,7 +61,7 @@ body {
   margin-right: -60px;
   transition: all .4s ease;
 
-  & a {
+  & #volverArriba {
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -206,7 +207,7 @@ body {
 
 .subheader {
   display: block;
-  width: 95%;
+  /* width: 95%; */
   margin: 0 auto;
   text-align: center;
 
@@ -661,4 +662,230 @@ p {
       }
     }
   }
+}
+
+.article {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (--verybig) {
+    max-width: 121rem;
+    margin: 0 auto;
+  }
+
+  & .cabecera, & .comentarios {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    & .cabecera__titulo {
+      margin: 2rem auto;
+    }
+
+    & .cabecera__imagen {
+      & .cabecera__image {
+        width: 40%;
+        margin: 0 auto;
+
+        & img {
+          display: block;
+          width: 8rem;
+          height: 8rem;
+          margin: 1rem auto 2rem auto;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    & .cabecera__textos, & .comentario__textos {
+      & .cabecera__autor .autor, & .comentario__autor .autor {
+        font-weight: bold;
+      }
+
+      & .cabecera__antiguedad .tiempo, & .comentario__antiguedad .tiempo {
+        font-style: italic;
+      }
+    }
+  }
+
+  & .contenido, & .comentarios {
+    padding: 2rem;
+
+    & h3 {
+      margin: 2.4rem 0;
+    }
+
+    & p {
+      text-align: justify;
+    }
+  }
+
+  & .contenido {
+    & dl {
+      padding: 1rem 2rem;
+
+      & dt, & dd {
+        padding: 1rem 1.8rem;
+      }
+
+      & dt {
+        padding-left: 0;
+        font-style: italic;
+      }
+    }
+
+    & .codigo {
+      padding: 2rem;
+      border: 1px solid black;
+      background-color: #eee;
+      border-radius: 1rem;
+      max-width: 90vw;
+      margin: 0 auto;
+
+      & .code {
+        display: block;
+        width: 98%;
+        margin: 0 auto;
+        overflow-x: scroll;
+      }
+    }
+
+    & ul, & ol {
+      margin-left: 6rem;
+      margin-bottom: 2rem;
+    }
+
+    & h4 {
+      font-weight: 600;
+      padding: 2rem;
+    }
+
+    & table {
+      margin-left: 6rem;
+      border-collapse: collapse;
+      
+      & th, & td {
+        vertical-align: middle;
+        padding: .8rem;
+        border-top: 1px solid var(--bgcactive);
+      }
+
+      & th {
+        font-weight: 300;
+        font-style: italic;
+        border-top: none;
+      }
+    }
+  }
+
+  & .comentarios {
+    font-family: var(--font-comentarios);
+    margin-top: 3rem;
+
+    & .comentario__titulo {
+      margin-bottom: 2rem;
+    }
+
+    & .comentario__textos p {
+      padding: .6rem 2rem;
+    }
+
+    & .comentario__comentario {
+      border: 1px solid black;
+      border-radius: 10px;
+      padding: 2rem;
+      background-color: #eee;
+    }
+
+    & .comentario__formulario {
+      margin-top: 3.6rem;
+
+      & h3 {
+        margin-bottom: 1rem;
+      }
+
+      & form {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      & form fieldset {
+        border-radius: 10px;
+
+        & div {
+          max-width: 100%;
+          margin-bottom: 1rem;
+
+          &.datos {
+            @media (--verybig) {
+              min-width: 46%;
+              max-width: 48%;
+              display: inline-block;
+            }
+          }
+          
+
+          & label {
+            display: inline-block;
+            width: 32%;
+            text-align: left;
+            padding-left: 1rem;
+
+            @media (--medium) {
+              width: 24%;
+              text-align: right;
+              padding-right: 1rem;
+            }
+
+            &.comenta {
+              @media (--verybig) {
+                width: 11%;
+              }
+            }
+          }
+
+          & input {
+            width: 60%;
+            height: 2.4rem;
+
+            @media (--medium) {
+              width: 70%;
+            }
+          }
+
+          & textarea {
+            width: 60%;
+
+            @media (--medium) {
+              width: 70%;
+            }
+
+            @media (--verybig) {
+              width: 78.2%;
+            }
+          }
+
+          & .boton {
+            display: block;
+            width: 12rem;
+            margin: 1rem auto;
+            padding: 1.6rem;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            background-color: var(--bgcactive);
+            border: none;
+            border-radius: .6rem;
+
+            &:hover {
+              color: var(--fondo);
+              background-color: var(--contraste);
+              cursor: pointer;
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }

@@ -17,14 +17,14 @@ mixin cajacategoria(titulo,contenido,temas)
       p= contenido
     .caja__boton
       a(href=`${temas}`, class="boton") Artículos
-mixin cajatema(srcs,alts,titulo,contenidostema,articulos)
+mixin cajatema(srcs,alts,tituloarticulo,contenidostema,articulos)
   .caja
     .caja__imagen
       .caja__image
         img(src=`${srcs}`, alt=`${alts}`)
     .caja__textos
       .caja__titulo
-        h3= titulo
+        h3= tituloarticulo
       .caja__fecha
         p Fecha: 
           time(datetime="2020-03-26") 26-3-2020
@@ -49,3 +49,14 @@ mixin migastemas(hrefes,menus,titulo)
       li
         a(href=`${hrefes}`)= menus
       li= titulo
+mixin migasarticulos(hrefes,menus,temas,titulo,tituloarticulo)
+  nav(class="migas", aria-label="Navegación secundaria")
+    ul
+      li
+        a(href="index.html") Inicio
+          i(class="fas fa-home")
+      li
+        a(href=`${hrefes}`)= menus
+      li
+        a(href=`${temas}`)= titulo
+      li= tituloarticulo
