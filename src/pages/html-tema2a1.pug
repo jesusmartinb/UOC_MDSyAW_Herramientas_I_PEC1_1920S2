@@ -1,0 +1,150 @@
+extends ../templates/template
+block title
+  title= titles[6]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.html-tema1a2#main
+    +migasarticulos(hrefes[1],menus[1],temas[1],titulo[1],tituloarticulo[2])
+    article.article
+      section.cabecera
+        .cabecera__titulo
+          h2= tituloarticulo[2]
+        .cabecera__imagen
+          .cabecera__image
+            img(src="images/autor1.jpg", alt="Imagen del Autor del Artículo")
+        .cabecera__textos
+          .cabecera__autor
+            p Autor: 
+              span.autor Jesús Martín
+          .cabecera__antiguedad
+            p Actualizado hace: 
+              span.tiempo 8 días
+      section.contenido
+        h3 Introducción
+        p Los hipervínculos (o hiperenlaces, o simplemente enlaces) son lo que hace que la web sea la web. Veremos qué son exactamente, la sintaxis que debemos usar para crearlos, qué es una URL y las mejores prácticas para crearlos.
+        h3 Conceptos
+        dl
+          dt Hipervínculo
+          dd Un hipervínculo es un enlace, normalmente entre dos páginas web de un mismo sitio, pero un enlace también puede apuntar a una página de otro sitio web, a un fichero, a una imagen, etc. Para navegar al destino al que apunta el enlace, hemos de hacer clic sobre él. También se conocen como hiperenlaces, enlaces o links.
+          dt URL
+          dd El acrónimo 
+            abbr(title="Uniform Resource Locator") URL 
+            | hace referencia al identificador único de cada recurso disponible en Internet. Estas son esenciales para crear los enlaces, pero también se utilizan en otros elementos HTML como las imágenes y los formularios.
+          dt Referencias
+          dd Especifican donde se encuentra el archivo que se enlaza dentro del sistema de archivos.
+        h3 Ejemplo
+        div(class="codigo")
+          pre
+            code.code
+              | &lt;!DOCTYPE HTML&gt;
+              | &lt;html lang="en"&gt;
+              |  &lt;head&gt;
+              |   &lt;meta charset="utf-8"&gt;
+              |   &lt;meta name="author" content="Jesús Martín Blanco"&gt;
+              |   &lt;meta name="description" content="Ejemplo de HTML5"&gt;
+              |   &lt;meta name="keywords" content="HTML5, Metadatos"&gt;
+              |    &lt;title&gt;Documento HTML&lt;/title&gt;
+              |  &lt;/head&gt;
+              |  &lt;body&gt;
+              |    &lt;p&gt;Hello World&lt;/p&gt;
+              |    &lt;p&gt;&lt;a href="index.html"&gt;Inicio&lt;/a&gt;&lt;/p&gt;
+              |    &lt;p&gt;&lt;a href="contacto.html" target="_blank"&gt;Contacto&lt;/a&gt;&lt;/p&gt;
+              |  &lt;/body&gt;
+              | &lt;/html&gt;
+        h3 Consideraciones
+        p Un enlace se crea incluyendo un texto, o cualquier otro contenido, que queramos convertir en un enlace, como contenido de un elemento de ancla &lt;a&gt;, dándole un atributo href conocido como target, que contendra la dirección web (URL) hacía donde queremos que apunte el enlace.
+        p Otros posibles atributos del elemento ancla son:
+        table
+          thead
+            tr
+              th Atributo
+              th Descripción
+          tbody
+            tr
+              td title
+              td Concebido para proporcionar información útil suplementaria sobre el destino.
+            tr
+              td target
+              td Especifica al navegador la forma de visualizar el destino del enlace.
+            tr
+              td hreflang
+              td Indica el idioma del documento de destino si es diferente al del documento de origen.
+            tr
+              td rel
+              td Especifica la relación entre el documento de origen y el archivo destino del enlace.
+            tr
+              td type
+              td Indica al navegador el tipo MIME del destino si no se trata de un documento html, por ejemplo archivo de sonido o una imagen.
+        p Para comprender donde apuntan los enlaces necesitamos conocer las URL y las referencias.
+        p Al trabajar en forma local en una web, habrá un directorio que contendra todos los archivos y directorios, ese es el directorio raiz y en el mismo se suelen encontrarel punto de entrada a la web, lo que se conoce como página de inicio o archivo index.html. Al conjunto se le denomina sitio o sitio web.
+        p Para realizar enlaces desde el archivo index.html a otro archivo del sitio se utilizan las URL relativas, que hacen referencia a una dirección que depende de la posición del archivo desde donde se utiliza el ancla. Existen diferentes posibilidades de referencias relativas, en función de la ubicación de los archivos de destino:
+        ul
+          li En el mismo directorio: simplemente especificamos el nombre del archivo al que hacemos referencia (destino).
+        div(class="codigo")
+          pre
+            code.code
+              |...
+              |    &lt;p&gt;&lt;a href="index.html"&gt;Inicio&lt;/a&gt;&lt;/p&gt;
+              |    &lt;p&gt;&lt;a href="contacto.html" target="_blank"&gt;Contacto&lt;/a&gt;&lt;/p&gt;
+              |...
+        ul
+          li Bajando en la estructura de directorios: Debemos bajar hasta el directorio que contiene el archivo de destino antes de indicar el archivo al que queremos enlazar. Para ello especificamos el nombre del directorio y le añadimos una barra inclinada hacia delante, y a continuación el nombre del archivo de destino.
+        div(class="codigo")
+          pre
+            code.code
+              |...
+              |    &lt;p&gt;&lt;a href="herramientas/index.html"&gt;Inicio&lt;/a&gt;&lt;/p&gt;
+              |    &lt;p&gt;&lt;a href="src/pages/contacto.html" target="_blank"&gt;Contacto&lt;/a&gt;&lt;/p&gt;
+              |...
+        ul
+          li Subiendo en la estructura de directorios: Cuando hay que subir un nivel en nuestro sistema de directorios, para luego entrar dentro de otro directorio, para subir de nivel utilizamos los dos puntos (..), luego una barra inclinada hacia delante, luego el directorio al que bajariamos seguido de una barra inclinada hacia delante y finalmente el nombre del archivo destino.
+        div(class="codigo")
+          pre
+            code.code
+              |...
+              |    &lt;p&gt;&lt;a href="../index.html"&gt;Inicio&lt;/a&gt;&lt;/p&gt;
+              |    &lt;p&gt;&lt;a href="../../proyecto/contacto.html" target="_blank"&gt;Contacto&lt;/a&gt;&lt;/p&gt;
+              |...
+        p Una URL absoluta hace referencia a una dirección definida por su ubicación absoluta en la web incluyendo el protocolo y el nombre de dominio, seguido de la ruta de directorios desde la raiz del servidor y con el nombre del archivo destino al final.
+        div(class="codigo")
+          pre
+            code.code
+              |...
+              |    &lt;p&gt;&lt;a href="https://www.midominio.com/index.html"&gt;Inicio&lt;/a&gt;&lt;/p&gt;
+              |    &lt;p&gt;&lt;a href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks" target="_blank"&gt;Contacto&lt;/a&gt;&lt;/p&gt;
+              |...
+        p En cuanto a las buenas prácticas en el uso de los enlaces destacaremos:
+        ul
+          li Claridad en las palabras, los enlaces han de ser accesibles por todo tipo de lectores, sin importar el contexto o las herramientas que prefiera.
+          li Utilizar referencias relativas siempre que sea posible.
+          li Indicación clara de los recursos no HTML.
+          li Utilizar el atributo download cuando se referencia una descarga.
+        h3 Referencias
+        ol
+          li
+            a(href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks", target="_blank") https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks
+          li
+            | HTML5 y CSS3 Domine los estándares de las aplicaciones web. Luc Van Lancker. Ediciones ENI. 2ª Edición 2013.
+        h3 Otros artículos sobre el tema
+        p
+          a(href="html-tema2a2.html") Marcado de Texto
+      section.comentarios
+        .comentario__formulario
+          h3 Deja un Comentario
+          form.formulario(action="")
+            fieldset
+              p.nota Todos los campos son obligatorios.
+              div.datos
+                label(for="nombre") Nombre: 
+                input(type="text", name="nombre", id="nombre", required)
+              div.datos
+                label(for="email") E-mail:  
+                input(type="email", name="email", id="email", required)
+              div
+                label(for="comentario", class="comenta") Comenta: 
+                textarea(name="comentario", rows="15")
+              div
+                button(type="submit", class="boton") Enviar

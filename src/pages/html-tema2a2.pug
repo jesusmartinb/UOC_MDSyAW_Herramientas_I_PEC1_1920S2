@@ -1,0 +1,81 @@
+extends ../templates/template
+block title
+  title= titles[6]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.html-tema1a2#main
+    +migasarticulos(hrefes[1],menus[1],temas[1],titulo[1],tituloarticulo[3])
+    article.article
+      section.cabecera
+        .cabecera__titulo
+          h2= tituloarticulo[3]
+        .cabecera__imagen
+          .cabecera__image
+            img(src="images/autor1.jpg", alt="Imagen del Autor del Artículo")
+        .cabecera__textos
+          .cabecera__autor
+            p Autor: 
+              span.autor Jesús Martín
+          .cabecera__antiguedad
+            p Actualizado hace: 
+              span.tiempo 6 días
+      section.contenido
+        h3 Introducción
+        p En otro artículo vimos las maneras básicas de etiquetar texto, pero hay muchas más. En este artículo veremos listas de descripciones.
+        h3 Conceptos
+        dl
+          dt Listas de descripción
+          dd Su proposito es marcar un conjunto de elementos y sus descripciones asociadas.
+        h3 Ejemplo
+        div(class="codigo")
+          pre
+            code.code
+              |...
+              | &lt;dl&gt;
+              |   &lt;dt&gt;&lt;abbr title="Hipertext Markup Lenguage"&gt;HTML (Hipertext Markup Lenguage)&lt;/abbr&gt;&lt;/dt&gt;
+              |   &lt;dd&gt;Lenguaje de Marcado de Hipertexto. A diferencia de otros lenguajes no esta compuesto por comandos e instrucciones sino por un conjunto de elementos formados por etiquetas que organizan y declaran el proposito del contenido del elemento.&lt;/dd&gt;
+              |   &lt;dt&gt;Etiqueta de apertura.&lt;/dt&gt;
+              |   &lt;dd&gt;Están constituidas por palabras clave del lenguaje y sus atributos ambos rodeados por un signo de < anterior y un signo > posterior.&lt;/dd&gt;
+              |   &lt;dt&gt;Etiqueta de cierre.&lt;/dt&gt;
+              |   &lt;dd&gt;Están constituidas por palabras clave del lenguaje rodeadas por los signos  posterior.&lt;/dd&gt;
+              |   &lt;dt&gt;Elemento.&lt;/dt&gt;
+              |   &lt;dd&gt;Esta constituido por un par de etiquetas de apertura y cierre con la misma palabra clave del lenguaje, y un contenido encerrado entre ambas. Los elementos también pueden ser vacíos, es decir, formados tan solo por una etiqueta de apertura y sin contenido. La mayoría de los elementos requieren de una etiqueta de apertura y otra de cierre.&lt;/dd&gt;
+              |   &lt;dt&gt;Atributo.&lt;/dt&gt;
+              |   &lt;dd&gt;Proveen información adicional sobre el elemento y son siempre declarados dentro de la etiqueta de apertura. Su sintaxis esta constituida por un nombre seguido de un signo de igualdad y entre comillas dobles el valor del atributo.&lt;/dd&gt;
+              | &lt;/dl&gt;
+              |...
+        h3 Consideraciones
+        p Las listas descriptivas utilizan la etiqueta &lt;dl&gt;, cada término se etiqueta con &lt;dt&gt; el llamado description term, y cada descripción con un elemento &lt;dd&gt; denominado description definition.
+        div.video-flexible
+          figure
+            iframe(class="video-youtube", width="560", height="315", src="https://www.youtube.com/embed/3Jd5m7yaCB8", frameborder="0", allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
+            figcaption Listas Descriptivas
+        h3 Referencias
+        ol
+          li
+            a(href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Advanced_text_formatting", target="_blank") https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Advanced_text_formatting
+          li
+            a(href="https://www.youtube.com/watch?v=3Jd5m7yaCB8", target="_blank") https://www.youtube.com/watch?v=3Jd5m7yaCB8
+        h3 Otros artículos sobre el tema
+        p
+          a(href="html-tema2a1.html") Hipervínculos
+      section.comentarios
+        .comentario__formulario
+          h3 Deja un Comentario
+          form.formulario(action="")
+            fieldset
+              p.nota Todos los campos son obligatorios.
+              div.datos
+                label(for="nombre") Nombre: 
+                input(type="text", name="nombre", id="nombre", required)
+              div.datos
+                label(for="email") E-mail:  
+                input(type="email", name="email", id="email", required)
+              div
+                label(for="comentario", class="comenta") Comenta: 
+                textarea(name="comentario", rows="15")
+              div
+                button(type="submit", class="boton") Enviar
