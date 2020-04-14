@@ -1,0 +1,106 @@
+extends ../templates/template
+block title
+  title= titles[10]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.html-tema1a1#main
+    +migasarticulos(hrefes[2],menus[2],temas[4],titulo[4],tituloarticulo[9])
+    article.article
+      section.cabecera
+        .cabecera__titulo
+          h2= tituloarticulo[9]
+        .cabecera__imagen
+          .cabecera__image
+            img(src="images/autor1.jpg", alt="Imagen del Autor del Artículo")
+        .cabecera__textos
+          .cabecera__autor
+            p Autor: 
+              span.autor Jesús Martín
+          .cabecera__antiguedad
+            p Actualizado hace: 
+              span.tiempo 4 días
+      section.contenido
+        h3 Introducción
+        p En este artículo tomaremos un documento 
+          abbr(title="Hipertext Markup Lenguage") HTML 
+          | simple y le aplicaremos 
+          abbr(title="Cascading Style Sheets") CSS
+          |, aprendiendo algunas cosas prácticas sobre el lenguaje en el camino.
+        h3 Conceptos
+        dl
+          dt Estilos en línea
+          dd Asignación de estilos dentro de cada elemento por medio del atributo style
+          dt Estilos embebidos
+          dd Asignación de estilos en el &lt;head&gt; del documento dentro de la etiqueta &lt;style&gt;.
+          dt Estilos externos
+          dd Utilización de un archivo externo con extensión .css para alvergar los estilos. Para enlazarlos con el documentos HTML se utiliza la etiqueta &lt;link&gt; dentro del head.
+        h3 Ejemplo
+        div(class="codigo")
+          pre
+            code.code
+              | &lt;!DOCTYPE HTML&gt;
+              | &lt;html lang="es"&gt;
+              |  &lt;head&gt;
+              |   &lt;meta charset="utf-8"&gt;
+              |   &lt;meta name="author" content="Jesús Martín Blanco"&gt;
+              |   &lt;meta name="description" content="Ejemplo de HTML y CSS"&gt;
+              |   &lt;meta name="keywords" content="HTML, CSS"&gt;
+              |    &lt;title&gt;Empezando con CSS&lt;/title&gt;
+              |  &lt;/head&gt;
+              |  &lt;body&gt;
+              |     &lt;h1&gt;Encabezado de primer nivel&lt;/h1&gt;
+              |    &lt;p&gt;Esto es un párrafo de texto. En el texto hay un &lt;span&gt;elemento span&lt;/span&gt; y también un &lt;a href="http://ejemplo.com"&gt;enlace&lt;/a&gt;&lt;/p&gt;
+              |    &lt;p&gt;Este es el segundo párrafo. Contiene un elemento de &lt;em&gt;emfasis&lt;/em&gt;&lt;/p&gt;
+              |     &lt;ul&gt;
+              |       &lt;li&gt;Item uno&lt;/li&gt;
+              |       &lt;li&gt;Item dos&lt;/li&gt;
+              |       &lt;li&gt;Item &lt;em&gt;uno&lt;/em&gt;&lt;/li&gt;
+              |     &lt;/ul&gt;
+              |  &lt;/body&gt;
+              | &lt;/html&gt;
+        h3 Consideraciones
+        p Lo primero que tenemos que hacer para agregar estilos al documento HTML anterior a traves de un archivo externo (la forma más común y útil de hacerlo), es vincularlo desde el encabezado del documento HTML.
+        p Crearemos un archivo en la misma carpeta que el documento HTML y lo guardamos con el nombre style.css.
+        p Para vincular style.css con el documento HTML agregamos la siguiente línea de código dentro del &lt;head&gt;.
+        div(class="codigo")
+          pre
+            code.code
+              |&lt;link rel="stylesheet" href="style.css"&gt;
+        p Esto le indica al navegador que tenemos una hoja de estilo que usa el atributo rel y la ubicación de la misma atraves del atributo href.
+        p Para provar que esto funciona agregaremos unas reglas a style.css.
+        div(class="codigo")
+          pre
+            code.code
+              | h1 {
+              |   color: red;
+              |   background-color: green;  
+              | }
+        p Tras guardar los documentos HTML y CSS cargamos el documento HTML en el navegador y debemos observar que el texto del encabezado de nivel superior es de color rojo sobre un fondo de color verde.
+        h3 Referencias
+        ol
+          li
+            a(href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started", target="_blank") https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started
+          li El gran libro de HTML5, CSS3 & JavaScript. Gauchat, J.D. Marcombo. 2ª Edición 2014.
+        h3 Otros artículos sobre el tema
+        p
+          a(href="css-tema1a1.html") Que es CSS
+      section.comentarios
+        .comentario__formulario
+          h3 Deja un Comentario
+          form.formulario(action="")
+            fieldset
+              p.nota Todos los campos son obligatorios.
+              div.datos
+                label(for="nombre") Nombre: 
+                input(type="text", name="nombre", id="nombre", required)
+              div.datos
+                label(for="email") E-mail:  
+                input(type="email", name="email", id="email", required)
+              div
+                label(for="comentario", class="comenta") Comenta: 
+                textarea(name="comentario", rows="15")
+              div
+                button(type="submit", class="boton") Enviar

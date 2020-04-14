@@ -1,0 +1,77 @@
+extends ../templates/template
+block title
+  title= titles[9]
+block header
+  h1 Aprende Abilidades Básicas
+  p Programa Sitios Web con HTML5, CSS y JavaScript
+  -let active = ''
+block main
+  main.html-tema1a1#main
+    +migasarticulos(hrefes[2],menus[2],temas[4],titulo[4],tituloarticulo[8])
+    article.article
+      section.cabecera
+        .cabecera__titulo
+          h2= tituloarticulo[8]
+        .cabecera__imagen
+          .cabecera__image
+            img(src="images/autor1.jpg", alt="Imagen del Autor del Artículo")
+        .cabecera__textos
+          .cabecera__autor
+            p Autor: 
+              span.autor Jesús Martín
+          .cabecera__antiguedad
+            p Actualizado hace: 
+              span.tiempo 6 días
+      section.contenido
+        h3 Introducción
+        p 
+          abbr(title="Cascading Style Sheets") CSS 
+          | (Cascading Style Sheets) le permite crear páginas web de excelente apariencia, pero ¿cómo funciona bajo el capó? Este artículo explica qué es 
+          abbr(title="Cascading Style Sheets") CSS
+          |, con un simple ejemplo de sintaxis, y también cubre algunos términos clave sobre el lenguaje.
+        h3 Conceptos
+        dl
+          dt
+            abbr(title="Cascading Style Sheets") CSS
+          dd Hojas de Estilo en Cascada le permite controlar exactamente cómmo se ven los elementos HTML en el navegador, presentando el marcado usando el diseño que desee.
+          dt Regla
+          dd Las reglas especifican grupos de estilos que deben aplicarse a elementos particulares o grupos de elementos.
+          dt Selector
+          dd Permite seleccionar el elemento o grupo de elementos a los que vamos a aplicar estilos.
+          dt Declaraciones
+          dd Estas toman la forma de pares de propiedades y valores. Cada par especifica una propiedad de los elementos que estamos seleccionando, separada del valor que nos gustaría aplicar a la propiedad. Dependiendo de la propiedad esta posee diferentes valores permitidos.
+        h3 Ejemplo
+        div(class="caja__imagen")
+          .caja__image
+            img(src="images/regla_css.png", alt="Regla CSS")
+        h3 Consideraciones
+        p Las sintaxis de las declaraciones incluye dos puntos despues del nombre de la propiedad y un punto y coma al final del valor.
+        p El conjunto de propiedades: valor; de una regla se agrupan usando llaves { }, al grupo formado por selector más las llaves que contienen una o varias declaraciones se le denomina regla. Se pueden crear tantas reglas como sea necesario.
+        h3 Referencias
+        ol
+          li
+            a(href="https://developer.mozilla.org", target="_blank") https://developer.mozilla.org
+          li
+            a(href="http://lidersystem-html.blogspot.com/2017/11/5-css-formatear-un-documento-html.html", target="_blank") http://lidersystem-html.blogspot.com/2017/11/5-css-formatear-un-documento-html.html
+          li
+            | El gran libro de HTML5, CSS3 & JavaScript. Gauchat, J.D. Marcombo. 2ª Edición 2014.
+        h3 Otros artículos sobre el tema
+        p
+          a(href="css-tema1a2.html") Comenzando
+      section.comentarios
+        .comentario__formulario
+          h3 Deja un Comentario
+          form.formulario(action="")
+            fieldset
+              p.nota Todos los campos son obligatorios.
+              div.datos
+                label(for="nombre") Nombre: 
+                input(type="text", name="nombre", id="nombre", required)
+              div.datos
+                label(for="email") E-mail:  
+                input(type="email", name="email", id="email", required)
+              div
+                label(for="comentario", class="comenta") Comenta: 
+                textarea(name="comentario", rows="15")
+              div
+                button(type="submit", class="boton") Enviar
