@@ -12,7 +12,7 @@
   --font-hero: 4rem;
 }
 
-/** Media Queries Custom**/
+/** Custom Media Queries**/
 
 * {
   box-sizing: border-box;
@@ -297,7 +297,6 @@ body {
 @media only screen and (min-width: 1010px) {
 
 .subheader .subheader__titulo h2{
-      font-size: 2.6rem;
       margin-bottom: 0;
       margin-top: 0;
       padding: 0 2.5rem 0 1.5rem;
@@ -407,13 +406,13 @@ a:visited {
 }
 
 a[href*="http"], a:link[href*="http"], a:visited[href*="http"] {
-    background: url('/external-link.f50b60d7.png') no-repeat 100% 0;
+    background: url('/external-link.f50b60d7.png') no-repeat 100% 60%;
     background-size: 16px 16px;
     padding-right: 19px
   }
 
 a[href*="http"]:focus, a[href*="http"]:hover, a:link[href*="http"]:focus, a:link[href*="http"]:hover, a:visited[href*="http"]:focus, a:visited[href*="http"]:hover {
-      background: url('/external-link2.673f6189.png') no-repeat 100% 0;
+      background: url('/external-link2.673f6189.png') no-repeat 100% 60%;
       background-size: 16px 16px;
       padding-right: 19px;
     }
@@ -614,9 +613,7 @@ p {
   grid-gap: 1rem;
   grid-gap: 1rem;
   gap: 1rem;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr
+  width: 100%
 }
 
 .footer .footer__subscribe {

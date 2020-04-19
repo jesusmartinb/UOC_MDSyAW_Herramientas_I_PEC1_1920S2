@@ -12,7 +12,7 @@
   --font-hero: 4rem;
 }
 
-/** Media Queries Custom**/
+/** Custom Media Queries**/
 
 @custom-media --small only screen and (min-width: 560px);
 
@@ -254,7 +254,6 @@ body {
     }
 
     @media (--big) {
-      font-size: 2.6rem;
       margin-bottom: 0;
       margin-top: 0;
       padding: 0 2.5rem 0 1.5rem;
@@ -342,12 +341,12 @@ a:visited {
   color: var(--texto);
 
   &[href*="http"] {
-    background: url('../images/external-link.png') no-repeat 100% 0;
+    background: url('../images/external-link.png') no-repeat 100% 60%;
     background-size: 16px 16px;
     padding-right: 19px;
 
     &:focus, &:hover {
-      background: url('../images/external-link2.png') no-repeat 100% 0;
+      background: url('../images/external-link2.png') no-repeat 100% 60%;
       background-size: 16px 16px;
       padding-right: 19px;
     }
@@ -525,8 +524,6 @@ p {
   grid-gap: 1rem;
   gap: 1rem;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
 
   & .footer__subscribe {
     display: grid;

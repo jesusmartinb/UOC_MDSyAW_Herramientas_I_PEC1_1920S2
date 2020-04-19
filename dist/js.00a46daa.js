@@ -117,79 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/style.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./../images/external-link.png":[["external-link.f50b60d7.png","images/external-link.png"],"images/external-link.png"],"./../images/external-link2.png":[["external-link2.673f6189.png","images/external-link2.png"],"images/external-link2.png"],"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../node_modules/process/browser.js":[function(require,module,exports) {
+})({"../../node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -23357,8 +23285,6 @@ exports.fab = _iconsCache;
 },{}],"js/index.js":[function(require,module,exports) {
 "use strict";
 
-require("../css/style.css");
-
 var _jquery = _interopRequireDefault(require("jquery"));
 
 var _fontawesomeSvgCore = require("@fortawesome/fontawesome-svg-core");
@@ -23461,8 +23387,7 @@ setTimeout(function () {
     }
   }
 
-  btnSiguiente.on('click', moverDerecha); //btnSiguiente.on('touch', moverDerecha);
-  // Función para que el slide se mueva a la izquierda
+  btnSiguiente.on('click', moverDerecha); // Función para que el slide se mueva a la izquierda
 
   function moverIzquierda() {
     if (!slider.is(':animated')) {
@@ -23476,8 +23401,7 @@ setTimeout(function () {
     }
   }
 
-  btnAnterior.on('click', moverIzquierda); //btnAnterior.on('touch', moverIzquierda);
-  // Intervalo para que el slide se mueva automáticamente
+  btnAnterior.on('click', moverIzquierda); // Intervalo para que el slide se mueva automáticamente
 
   var intervalo = setInterval(moverDerecha, 5000);
 
@@ -23486,7 +23410,7 @@ setTimeout(function () {
     intervalo = setInterval(moverDerecha, 5000);
   }
 });
-},{"../css/style.css":"css/style.css","jquery":"../../node_modules/jquery/dist/jquery.js","@fortawesome/fontawesome-svg-core":"../../node_modules/@fortawesome/fontawesome-svg-core/index.es.js","@fortawesome/free-solid-svg-icons":"../../node_modules/@fortawesome/free-solid-svg-icons/index.es.js","@fortawesome/free-brands-svg-icons":"../../node_modules/@fortawesome/free-brands-svg-icons/index.es.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"jquery":"../../node_modules/jquery/dist/jquery.js","@fortawesome/fontawesome-svg-core":"../../node_modules/@fortawesome/fontawesome-svg-core/index.es.js","@fortawesome/free-solid-svg-icons":"../../node_modules/@fortawesome/free-solid-svg-icons/index.es.js","@fortawesome/free-brands-svg-icons":"../../node_modules/@fortawesome/free-brands-svg-icons/index.es.js"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -23514,7 +23438,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60593" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56519" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

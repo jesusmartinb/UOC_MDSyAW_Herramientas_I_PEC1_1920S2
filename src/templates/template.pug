@@ -4,7 +4,6 @@ html(lang="es")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible" content="ie=edge")
         block title
         link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Gupter:400,700%7cSource+Sans+Pro:300i,400,600,700&display=swap")
         link(rel="stylesheet", href="./css/style.css")
@@ -13,47 +12,47 @@ html(lang="es")
         div.btn-volver-arriba#btnVolverArriba
             a(href="#", class="volver-arriba", id="volverArriba")
                 i(class="fas fa-arrow-up", aria-hidden="true")
-    header.header
-        i.fas.fa-bars.icon-menu.burguer-boton#boton-menu
-        section.contenedor-slider
-            div.slider#slider
-                div.slide
-                    img(src="./images/hero1.jpg", alt="Slide")
-                div.slide
-                    img(src="./images/hero2.jpg", alt="Slide")
-                div.slide
-                    img(src="./images/hero3.jpg", alt="Slide")
-                div.slide
-                    img(src="./images/hero4.jpg", alt="Slide")
-            div.btn-anterior#btnAnterior
-                i(class="fa fa-arrow-left", aria-hidden="true")
-            div.btn-siguiente#btnSiguiente
-                i(class="fa fa-arrow-right", aria-hidden="true")
-        block header
-    .subheader
-        .subheader__logo
-            a(href="index.html")
-                img(src="./images/logo.gif", alt="Logotipo")
-        .subheader__titulo
-            h2 Desarrollo Front-End
-        nav(class="subheader__menu menu", aria-label="Menú principal del sitio")
-            ul
-                -let i = 0
-                while i < menus.length
-                    if menus[i].toLowerCase() == active
-                        li(class="active")
-                            +enlace(hrefes[i],menus[i])
-                    else
-                        li
-                            +enlace(hrefes[i],menus[i])
-                    -i++
-    block main
-    footer.footer
-        .footer__subscribe
-            h4 Subscribete
-            p Consigue los últimos artículos 
-        .footer__form
-            form
-                input(type="email", name="subscribe", id="subscribe", placeholder="Tu e-mail")
-                input(type="submit", value="Subscribirme")
-    script(src="./js/index.js")
+        header.header
+            i.fas.fa-bars.icon-menu.burguer-boton#boton-menu
+            section.contenedor-slider
+                div.slider#slider
+                    div.slide
+                        img(src="./images/hero1.jpg", alt="Slide")
+                    div.slide
+                        img(src="./images/hero2.jpg", alt="Slide")
+                    div.slide
+                        img(src="./images/hero3.jpg", alt="Slide")
+                    div.slide
+                        img(src="./images/hero4.jpg", alt="Slide")
+                div.btn-anterior#btnAnterior
+                    i(class="fa fa-arrow-left", aria-hidden="true")
+                div.btn-siguiente#btnSiguiente
+                    i(class="fa fa-arrow-right", aria-hidden="true")
+            block header
+        .subheader
+            .subheader__logo
+                a(href="index.html")
+                    img(src="./images/logo.gif", alt="Logotipo")
+            .subheader__titulo
+                h2 Desarrollo Front-End
+            nav(class="subheader__menu menu", aria-label="Menú principal del sitio")
+                ul
+                    -let i = 0
+                    while i < menus.length
+                        if menus[i].toLowerCase() == active
+                            li(class="active")
+                                +enlace(hrefes[i],menus[i])
+                        else
+                            li
+                                +enlace(hrefes[i],menus[i])
+                        -i++
+        block main
+        footer.footer
+            .footer__subscribe
+                h4 Subscribete
+                p Consigue los últimos artículos 
+            .footer__form
+                form
+                    input(type="email", name="subscribe", id="subscribe", placeholder="Tu e-mail")
+                    input(type="submit", value="Subscribirme")
+        script(src="./js/index.js")

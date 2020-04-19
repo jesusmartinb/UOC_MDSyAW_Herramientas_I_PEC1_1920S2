@@ -1,5 +1,3 @@
-import '../css/style.css';
-
 import $ from 'jquery';
 
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
@@ -116,7 +114,6 @@ $(document).ready(function () {
     }
 
     btnSiguiente.on('click', moverDerecha);
-    //btnSiguiente.on('touch', moverDerecha);
 
 
     // Función para que el slide se mueva a la izquierda
@@ -133,7 +130,6 @@ $(document).ready(function () {
     }
 
     btnAnterior.on('click', moverIzquierda);
-    //btnAnterior.on('touch', moverIzquierda);
 
     // Intervalo para que el slide se mueva automáticamente
     var intervalo = setInterval(moverDerecha, 5000);
