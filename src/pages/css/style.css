@@ -525,6 +525,25 @@ p {
   gap: 1rem;
   width: 100%;
 
+  @media (--medium) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  & .footer__logo {
+    width: 18rem;
+    margin: 0 auto;
+
+    & a {
+      border-bottom: none;
+
+      & .clip-svg {
+        max-width: 110%;
+        height: 18rem;
+        clip-path: url(#myClip);
+      }
+    }
+  }
+
   & .footer__subscribe {
     display: grid;
     grid-template-columns: 1fr;
