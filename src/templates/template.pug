@@ -17,13 +17,33 @@ html(lang="es")
             section.contenedor-slider
                 div.slider#slider
                     div.slide
-                        img(src="./images/hero1.jpg", alt="Slide")
+                        picture
+                            source(media="(min-width: 910px)", srcset="./images/hero1-big.jpg 3250w, ./images/hero1-verybig.jpg 3840w", sizes="100vw")
+                            source(media="(min-width: 775px)", srcset="./images/hero1-medium.jpg 2660w, ./images/hero1-big.jpg 3250w", sizes="100vw")
+                            source(media="(min-width: 630px)", srcset="./images/hero1-small.jpg 2070w, ./images/hero1-medium.jpg 2660w", sizes="100vw")
+                            source(media="(min-width: 450px)", srcset="./images/hero1-small.jpg 2070w", sizes="100vw")
+                            img(src="./images/hero1.jpg", alt="Slide", srcset="./images/hero1.jpg 1480w, ./images/hero1-small.jpg 2070w", sizes="100vw")
                     div.slide
-                        img(src="./images/hero2.jpg", alt="Slide")
+                        picture
+                            source(media="(min-width: 910px)", srcset="./images/hero2-big.jpg 3250w, ./images/hero2-verybig.jpg 3840w", sizes="100vw")
+                            source(media="(min-width: 775px)", srcset="./images/hero2-medium.jpg 2660w, ./images/hero2-big.jpg 3250w", sizes="100vw")
+                            source(media="(min-width: 630px)", srcset="./images/hero2-small.jpg 2070w, ./images/hero2-medium.jpg 2660w", sizes="100vw")
+                            source(media="(min-width: 450px)", srcset="./images/hero2-small.jpg 2070w", sizes="100vw")
+                            img(src="./images/hero2.jpg", alt="Slide", srcset="./images/hero2.jpg 1480w, ./images/hero2-small.jpg 2070w", sizes="100vw")
                     div.slide
-                        img(src="./images/hero3.jpg", alt="Slide")
+                        picture
+                            source(media="(min-width: 910px)", srcset="./images/hero3-big.jpg 3250w, ./images/hero3-verybig.jpg 3840w", sizes="100vw")
+                            source(media="(min-width: 775px)", srcset="./images/hero3-medium.jpg 2660w, ./images/hero3-big.jpg 3250w", sizes="100vw")
+                            source(media="(min-width: 630px)", srcset="./images/hero3-small.jpg 2070w, ./images/hero3-medium.jpg 2660w", sizes="100vw")
+                            source(media="(min-width: 450px)", srcset="./images/hero3-small.jpg 2070w", sizes="100vw")
+                            img(src="./images/hero3.jpg", alt="Slide", srcset="./images/hero3.jpg 1480w, ./images/hero3-small.jpg 2070w", sizes="100vw")
                     div.slide
-                        img(src="./images/hero4.jpg", alt="Slide")
+                        picture
+                            source(media="(min-width: 910px)", srcset="./images/hero4-big.jpg 3250w, ./images/hero4-verybig.jpg 3840w", sizes="100vw")
+                            source(media="(min-width: 775px)", srcset="./images/hero4-medium.jpg 2660w, ./images/hero4-big.jpg 3250w", sizes="100vw")
+                            source(media="(min-width: 630px)", srcset="./images/hero4-small.jpg 2070w, ./images/hero4-medium.jpg 2660w", sizes="100vw")
+                            source(media="(min-width: 450px)", srcset="./images/hero4-small.jpg 2070w", sizes="100vw")
+                            img(src="./images/hero4.jpg", alt="Slide", srcset="./images/hero4.jpg 1480w, ./images/hero4-small.jpg 2070w", sizes="100vw")
                 div.btn-anterior#btnAnterior
                     i(class="fa fa-arrow-left", aria-hidden="true")
                 div.btn-siguiente#btnSiguiente
