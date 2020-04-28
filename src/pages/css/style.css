@@ -38,6 +38,7 @@ body {
     color: var(--texto);
     font-family: var(--font-base);
     font-size: var(--font-body);
+    overflow-x: hidden;
 }
 
 .no-visible {
@@ -166,6 +167,7 @@ body {
   & h1 {
     top: 30%;
     transform: translateY(-30%);
+    animation: entradah1 2s ease-in-out;
 
     @media (--small) {
       top: 35%;
@@ -186,6 +188,7 @@ body {
   & p {
     top: 70%;
     transform: translateY(-70%);
+    animation: entradap 2.8s ease-in-out;
 
     @media (--small) {
       top: 65%;
@@ -202,7 +205,28 @@ body {
       transform: translateY(-55%);
     }
   }
+}
 
+@keyframes entradah1 {
+  0% {
+    margin-left: -100%;
+    width: 300%;
+  }
+  100% {
+    margin-left: 0%;
+    width: 100%
+  }
+}
+
+@keyframes entradap {
+  0% {
+    margin-left: 100%;
+    width: 300%;
+  }
+  100% {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 .subheader {

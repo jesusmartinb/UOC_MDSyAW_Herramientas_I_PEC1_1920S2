@@ -34,6 +34,7 @@ body {
     font-family: var(--font-base);
     font-size: 2rem;
     font-size: var(--font-body);
+    overflow-x: hidden;
 }
 
 .no-visible {
@@ -82,7 +83,6 @@ body {
   justify-content: center;
   position: relative;
   align-items: center
-
 }
 
 .header .contenedor-slider {
@@ -170,7 +170,9 @@ body {
 
 .header h1 {
     top: 30%;
-    transform: translateY(-30%)
+    transform: translateY(-30%);
+    -webkit-animation: entradah1 2s ease-in-out;
+            animation: entradah1 2s ease-in-out
   }
 
 @media only screen and (min-width: 560px) {
@@ -199,7 +201,9 @@ body {
 
 .header p {
     top: 70%;
-    transform: translateY(-70%)
+    transform: translateY(-70%);
+    -webkit-animation: entradap 2.8s ease-in-out;
+            animation: entradap 2.8s ease-in-out
   }
 
 @media only screen and (min-width: 560px) {
@@ -225,6 +229,50 @@ body {
       transform: translateY(-55%)
   }
     }
+
+@-webkit-keyframes entradah1 {
+  0% {
+    margin-left: -100%;
+    width: 300%;
+  }
+  100% {
+    margin-left: 0%;
+    width: 100%
+  }
+}
+
+@keyframes entradah1 {
+  0% {
+    margin-left: -100%;
+    width: 300%;
+  }
+  100% {
+    margin-left: 0%;
+    width: 100%
+  }
+}
+
+@-webkit-keyframes entradap {
+  0% {
+    margin-left: 100%;
+    width: 300%;
+  }
+  100% {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes entradap {
+  0% {
+    margin-left: 100%;
+    width: 300%;
+  }
+  100% {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 
 .subheader {
   display: block;
