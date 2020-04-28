@@ -827,27 +827,28 @@ p {
       }
     }
 
-    & .caja__imagen {
+  }
 
-      & .caja__image {
-        width: 96%;
+  & .caja__imagen {
+
+    & .caja__image {
+      width: 96%;
+      margin: 0 auto;
+
+      & img {
+        display: block;
+        max-width: 100%;
+        padding: 2rem;
         margin: 0 auto;
-
-        & img {
-          display: block;
-          max-width: 100%;
-          padding: 2rem;
-          margin: 0 auto;
-        }
       }
-
-      @media (--verybig) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
     }
+
+    @media (--verybig) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
   }
 
   & .comentarios {

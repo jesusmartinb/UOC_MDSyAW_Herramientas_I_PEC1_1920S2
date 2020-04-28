@@ -17,11 +17,11 @@ mixin cajacategoria(titulo,contenido,temas)
       p= contenido
     .caja__boton
       a(href=`${temas}`, class="boton") Artículos
-mixin cajatema(srcs,alts,tituloarticulo,contenidostema,articulos)
+mixin cajatema(srcs,alts,srcsets,tituloarticulo,contenidostema,articulos)
   .caja
     .caja__imagen
       .caja__image
-        img(src=`${srcs}`, alt=`${alts}`)
+        img(src=`${srcs}`, alt=`${alts}`, srcset=`${srcsets}`)
     .caja__textos
       .caja__titulo
         h3= tituloarticulo
