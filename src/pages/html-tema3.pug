@@ -2,14 +2,14 @@ extends ../templates/template
 block title
   title= titles[7]
 block header
-  h1 Aprende Abilidades Básicas
+  h1(role="header") Aprende Abilidades Básicas
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main.html-tema3#main
+  main(class="html-tema3", id="main", role="main")
     +migastemas(hrefes[1],menus[1],titulo[2])
-    h2= titulo[2]
+    h2(role="header")= titulo[2]
     p Este módulo nos introduce en el marcado de tablas HTML, incluyendo los conceptos básicos, como son filas y celdas, encabezados, o bien hacer que las celdas abarquen varias filas y columnas.
     section.grid-tema
-      +cajatema(srcs[4],'Tablas Básicas','images/nhhtmltablas1-464.jpg 464w, images/nhhtmltablas1-644.jpg 644w, images/nhhtmltablas1-834.jpg 834w, images/nhhtmltablas1.jpg 1024w',tituloarticulo[4],contenidostema[4],articulos[4])
-      +cajatema(srcs[5],'Tablas Avanzado','images/nhhtmltablas2-464.jpg 464w, images/nhhtmltablas2-644.jpg 644w, images/nhhtmltablas2-834.jpg 834w, images/nhhtmltablas2.jpg 1024w',tituloarticulo[5],contenidostema[5],articulos[5])
+      +cajatema(srcs[4],'Tablas mostrando tres posibilidades de subscripción a un servicio.','images/nhhtmltablas1-464.jpg 464w, images/nhhtmltablas1-644.jpg 644w, images/nhhtmltablas1-834.jpg 834w, images/nhhtmltablas1.jpg 1024w',tituloarticulo[4],contenidostema[4],articulos[4])
+      +cajatema(srcs[5],'Sobre una mesa observamos un portatil que muestra un layout, una agenda, papeles y una taza de cafe.','images/nhhtmltablas2-464.jpg 464w, images/nhhtmltablas2-644.jpg 644w, images/nhhtmltablas2-834.jpg 834w, images/nhhtmltablas2.jpg 1024w',tituloarticulo[5],contenidostema[5],articulos[5])

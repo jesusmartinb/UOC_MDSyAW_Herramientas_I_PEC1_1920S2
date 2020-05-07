@@ -2,16 +2,16 @@ extends ../templates/template
 block title
   title= titles[5]
 block header
-  h1 Aprende Abilidades Básicas
+  h1(role="header") Aprende Abilidades Básicas
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main.html-tema1a2#main
+  main(class="html-tema1a2", id="main", role="main")
     +migasarticulos(hrefes[1],menus[1],temas[0],titulo[0],tituloarticulo[1])
     article.article
       section.cabecera
         .cabecera__titulo
-          h2= tituloarticulo[1]
+          h2(role="header")= tituloarticulo[1]
         .cabecera__imagen
           .cabecera__image
             img(src="images/autor1.jpg", alt="Imagen del Autor del Artículo")
@@ -24,19 +24,19 @@ block main
               span.tiempo 10 días
       section.caja__imagen
         .caja__image
-          img(src=`${srcs[1]}`, alt="Metadatos", srcset="images/nhhtmlfunda2-464.jpg 464w, images/nhhtmlfunda2-644.jpg 644w, images/nhhtmlfunda2-834.jpg 834w, images/nhhtmlfunda2.jpg 1024w")
+          img(src=`${srcs[1]}`, alt="Sobre una pantalla de monitor se observa el código del elemento head con elementos meta.", srcset="images/nhhtmlfunda2-464.jpg 464w, images/nhhtmlfunda2-644.jpg 644w, images/nhhtmlfunda2-834.jpg 834w, images/nhhtmlfunda2.jpg 1024w")
       section.contenido
-        h3 Introducción
+        h3(role="header") Introducción
         p El &lt;head&gt;, o cabecera, de un documento HTML no se muestra en el navegador web cuando se carga la página. Contiene información como el &lt;title&gt;, enlaces a 
           abbr(title="Cascading Style Sheet") CSS
           |, o metadatos del documento (como información sobre su autoría o palabras clave importantes que lo describen).
-        h3 Conceptos
+        h3(role="header") Conceptos
         dl
           dt Metadatos
           dd Datos que describen datos.
           dt uft-8
           dd Conjunto de caracteres universal que incluye prácticamente cualquier carácter de cualquier lenguaje humano.
-        h3 Ejemplo
+        h3(role="header") Ejemplo
         div(class="codigo")
           pre
             code.code
@@ -53,7 +53,7 @@ block main
               |    &lt;p&gt;Hello World&lt;/p&gt;
               |  &lt;/body&gt;
               | &lt;/html&gt;
-        h3 Consideraciones
+        h3(role="header") Consideraciones
         p En 
           abbr(title="Hipertext Markup Lenguage") HTML 
           | la forma de agregar metadatos a un documento es mediante el elemento &lt;meta&gt;. Los metadatos se situan en el &lt;head&gt; del documento, y entre ellos se encuentra el elemento que especifica la codificación de caracteres del documento, indicando como el texto va ha ser presentado en la pantalla, para ello se utiliza el atributo charset.
@@ -64,18 +64,19 @@ block main
         p Así entre los atributos name más usuales encontramos author y description. El primero permite conocerquien escribió el documento. El segundo es importante que incluya palabras clave relacionadas con el contenido del documento, pues influye en las búsquedas relevantes de los motores de búsqueda (SEO).
         p Existen una gran cantidad de etiquetas meta.
         p La información de los metadatos no es mostrada en la ventana del navegador, es importante para los navegadores y dispositivos que necesitan hacer una lecturaprevia u obtener datos relevantes y la configuración del documento.
-        h3 Referencias
+        h3(role="header") Referencias
         ol
           li
             a(href="https://developer.mozilla.org", target="_blank") https://developer.mozilla.org
+              strong (Abre en una ventana nueva)
           li
             | El gran libro de HTML5, CSS3 & JavaScript. Gauchat, J.D. Marcombo. 2ª Edición 2014.
-        h3 Otros artículos sobre el tema
+        h3(role="header") Otros artículos sobre el tema
         p
           a(href="html-tema1a1.html") Comenzando con HTML5
       section.comentarios
         .comentario__formulario
-          h3 Deja un Comentario
+          h3(role="header") Deja un Comentario
           form.formulario(action="")
             fieldset
               p.nota Todos los campos son obligatorios.

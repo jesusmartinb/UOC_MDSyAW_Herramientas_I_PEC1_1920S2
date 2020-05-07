@@ -2,14 +2,14 @@ extends ../templates/template
 block title
   title= titles[13]
 block header
-  h1 Aprende Abilidades Básicas
+  h1(role="header") Aprende Abilidades Básicas
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main.css-tema5#main
+  main(class="css-tema5", id="main", role="main")
     +migastemas(hrefes[2],menus[2],titulo[8])
-    h2= titulo[8]
+    h2(role="header")= titulo[8]
     p Trabajaremos los fundamentos de la maquetación web viendo los distintos sistemas de posicionado que el CSS moderno nos ofrece. Además, veremos los fundamentos del RWD (Responsive Web Design) o diseño responsivo, que nos permite maquetar el mismo contenido para distintos tamaños de pantalla y/o dispositivos.
     section.grid-tema
-      +cajatema(srcs[14],'Flexbox','',tituloarticulo[14],contenidostema[14],articulos[14])
-      +cajatema(srcs[15],'Responsive Web Design','images/nhcsslayout2-464.jpg 464w, images/nhcsslayout2-644.jpg 644w, images/nhcsslayout2-834.jpg 834w, images/nhcsslayout2.jpg 1024w',tituloarticulo[15],contenidostema[15],articulos[15])
+      +cajatema(srcs[14],'Esquema mostrando los ejes de un flex container y flex items','',tituloarticulo[14],contenidostema[14],articulos[14])
+      +cajatema(srcs[15],'Se muestran las pantallas de un pc, portatil, tablet y smartphone enseñando el comportamiento responsive de una misma web','images/nhcsslayout2-464.jpg 464w, images/nhcsslayout2-644.jpg 644w, images/nhcsslayout2-834.jpg 834w, images/nhcsslayout2.jpg 1024w',tituloarticulo[15],contenidostema[15],articulos[15])

@@ -2,14 +2,14 @@ extends ../templates/template
 block title
   title= titles[14]
 block header
-  h1 Aprende Abilidades Básicas
+  h1(role="header") Aprende Abilidades Básicas
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main.javascript-tema1#main
+  main(class="js-tema1", id="main", role="main")
     +migastemas(hrefes[3],menus[3],titulo[9])
-    h2= titulo[9]
+    h2(role="header")= titulo[9]
     p JavaScript contiene una librería estándar de objetos, tales como Array, Date, y Math, y un conjunto central de elementos del lenguaje, tales como operadores, estructuras de control, y sentencias.
     section.grid-tema
-      +cajatema(srcs[16],'JavaScript no es Java','images/jsfunda1-464.jpg 464w, images/jsfunda1-644.jpg 644w, images/jsfunda1-834.jpg 834w, images/jsfunda1.jpg 1024w',tituloarticulo[16],contenidostema[16],articulos[16])
-      +cajatema(srcs[17],'ECMAScript','images/jsfunda2-464.jpg 464w, images/jsfunda2-644.jpg 644w, images/jsfunda2-834.jpg 834w, images/jsfunda2.jpg 1024w',tituloarticulo[17],contenidostema[17],articulos[17])
+      +cajatema(srcs[16],'Logotipo de JavaScript, letras JS en negro sobre fondo amarillo.','images/jsfunda1-464.jpg 464w, images/jsfunda1-644.jpg 644w, images/jsfunda1-834.jpg 834w, images/jsfunda1.jpg 1024w',tituloarticulo[16],contenidostema[16],articulos[16])
+      +cajatema(srcs[17],'La palabra ECMAScript en negro sobre fondo amarillo.','images/jsfunda2-464.jpg 464w, images/jsfunda2-644.jpg 644w, images/jsfunda2-834.jpg 834w, images/jsfunda2.jpg 1024w',tituloarticulo[17],contenidostema[17],articulos[17])

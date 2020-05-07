@@ -11,6 +11,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
 import { faCss3Alt } from '@fortawesome/free-brands-svg-icons';
 import { faJsSquare } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 library.add(faCheck);
 library.add(faArrowUp);
@@ -22,6 +23,7 @@ library.add(faArrowRight);
 library.add(faHtml5);
 library.add(faJsSquare);
 library.add(faCss3Alt);
+library.add(faEnvelope);
 dom.watch();
 
 // Funcionalidad botón hamburgesa

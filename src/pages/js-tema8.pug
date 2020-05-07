@@ -2,14 +2,14 @@ extends ../templates/template
 block title
   title= titles[21]
 block header
-  h1 Aprende Abilidades Básicas
+  h1(role="header") Aprende Abilidades Básicas
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main.javascript-tema8#main
+  main(class="js-tema8", id="main", role="main")
     +migastemas(hrefes[3],menus[3],titulo[16])
-    h2= titulo[16]
+    h2(role="header")= titulo[16]
     p Suele pasar que las traducciones al español varían según las preferencias del traductor. Así, Array, se suele traducir cómo Matriz, cómo tabla o cómo Vector dependiendo del traductor.
     section.grid-tema
-      +cajatema(srcs[29],'Introducción','',tituloarticulo[29],contenidostema[29],articulos[29])
-      +cajatema(srcs[30],'Métodos','',tituloarticulo[30],contenidostema[30],articulos[30])
+      +cajatema(srcs[29],'Anagrama de la pantalla de un portatil en el que se observan las palabras Arrays y JS en negro sobre fondo amarillo.','',tituloarticulo[29],contenidostema[29],articulos[29])
+      +cajatema(srcs[30],'Fragmento de código HTML en el que se observa un script de JavaScript con un array.','',tituloarticulo[30],contenidostema[30],articulos[30])

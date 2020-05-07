@@ -1,22 +1,22 @@
 mixin caja(fa,titulo,contenido,hrefes)
   .caja
-    .caja__fa: i(class=fa)
+    .caja__fa: i(class=fa, role="img")
     .caja__titulo
-      h3= titulo
+      h3(role="header")= titulo
     .caja__contenido
       p= contenido
     .caja__boton
-      a(href=`${hrefes}`, class="boton") Leer más
+      a(href=`${hrefes}`, class="boton", id="leerMas", aria-labelledby="Leer Más") Leer más
 mixin enlace(hrefes,menus)
   a(href=`${hrefes}`)= menus
 mixin cajacategoria(titulo,contenido,temas)
   .caja
     .caja__titulo
-      h3= titulo
+      h3(role="header")= titulo
     .caja__contenido
       p= contenido
     .caja__boton
-      a(href=`${temas}`, class="boton") Artículos
+      a(href=`${temas}`, class="boton", id="articulos", aria-labelledby="artículos") Artículos
 mixin cajatema(srcs,alts,srcsets,tituloarticulo,contenidostema,articulos)
   .caja
     .caja__imagen
@@ -24,7 +24,7 @@ mixin cajatema(srcs,alts,srcsets,tituloarticulo,contenidostema,articulos)
         img(src=`${srcs}`, alt=`${alts}`, srcset=`${srcsets}`)
     .caja__textos
       .caja__titulo
-        h3= tituloarticulo
+        h3(role="header")= tituloarticulo
       .caja__fecha
         p Fecha: 
           time(datetime="2020-03-26") 26-3-2020
@@ -32,13 +32,13 @@ mixin cajatema(srcs,alts,srcsets,tituloarticulo,contenidostema,articulos)
         p Autor: Jesús Martín Blanco
         p= contenidostema
       .caja__boton
-        a(href=`${articulos}`, class="boton") Artículo
+        a(href=`${articulos}`, class="boton", id="articulo" aria-labelledby="artículo") Artículo
 mixin migas(menus)
   nav(class="migas", aria-label="Navegación secundaria")
     ul
       li
         a(href="index.html") Inicio
-          i(class="fas fa-home")
+          i(class="fas fa-home", role="img")
       li= menus
 mixin migastemas(hrefes,menus,titulo)
   nav(class="migas", aria-label="Navegación secundaria")

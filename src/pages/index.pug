@@ -2,11 +2,11 @@ extends ../templates/template
 block title
   title= titles[0]
 block header
-  h1 Desarrollo Front-End
+  h1(role="header") Desarrollo Front-End
   p Como construir una web
   -let active = 'inicio'
 block main
-  main.indice#main
+  main(class="indice", id="main", role="main")
     section.grid
       +caja('fab fa-html5',menus[1],'HTML es el lenguaje de marcado que usaremos para definir el contenido y la estructura de las páginas web.',hrefes[1])
       +caja('fab fa-css3-alt',menus[2],'CSS es un conjunto de reglas que nos permitirá describir cómo se mostrará la página web en la pantalla.',hrefes[2])

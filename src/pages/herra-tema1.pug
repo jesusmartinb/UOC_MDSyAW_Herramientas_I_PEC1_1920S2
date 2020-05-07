@@ -2,14 +2,14 @@ extends ../templates/template
 block title
   title= titles[23]
 block header
-  h1 Aprende Abilidades Básicas
+  h1(role="header") Aprende Abilidades Básicas
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main.herramientas-tema1#main
+  main(class="herra-tema1", id="main", role="main")
     +migastemas(hrefes[4],menus[4],titulo[18])
-    h2= titulo[18]
+    h2(role="header")= titulo[18]
     p En este módulo conocemos el funcionamiento del inspector, del editor de estilos y de las herramientas para diseño responsive, tres de las herramientas básicas que conforman las herramientas para desarrolladores más habituales de los navegadores.
     section.grid-tema
-      +cajatema(srcs[32],'El Inspector','images/nhherraherra1-464.jpg 464w, images/nhherraherra1-644.jpg 644w, images/nhherraherra1-834.jpg 834w, images/nhherraherra1.jpg 1024w',tituloarticulo[32],contenidostema[32],articulos[32])
-      +cajatema(srcs[33],'Herramientas para Diseño Responsive','images/nhherraherra2-464.jpg 464w, images/nhherraherra2-644.jpg 644w, images/nhherraherra2-834.jpg 834w, images/nhherraherra2.jpg 1024w',tituloarticulo[33],contenidostema[33],articulos[33])
+      +cajatema(srcs[32],'Imagen del Inspector en las herramientas de desarrollo de Firefox Browser Developer Edition','images/nhherraherra1-464.jpg 464w, images/nhherraherra1-644.jpg 644w, images/nhherraherra1-834.jpg 834w, images/nhherraherra1.jpg 1024w',tituloarticulo[32],contenidostema[32],articulos[32])
+      +cajatema(srcs[33],'Imagen de Herramientas para Diseño Responsive en las herramientas de desarrollo de Firefox Browser Developer Edition','images/nhherraherra2-464.jpg 464w, images/nhherraherra2-644.jpg 644w, images/nhherraherra2-834.jpg 834w, images/nhherraherra2.jpg 1024w',tituloarticulo[33],contenidostema[33],articulos[33])

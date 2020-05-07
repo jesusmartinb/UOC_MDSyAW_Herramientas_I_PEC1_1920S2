@@ -2,14 +2,14 @@ extends ../templates/template
 block title
   title= titles[20]
 block header
-  h1 Aprende Abilidades Básicas
+  h1(role="header") Aprende Abilidades Básicas
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main.javascript-tema7#main
+  main(class="js-tema7", id="main", role="main")
     +migastemas(hrefes[3],menus[3],titulo[15])
-    h2= titulo[15]
+    h2(role="header")= titulo[15]
     p En este apartado trabajaremos los temas números, fechas y textos.
     section.grid-tema
-      +cajatema(srcs[27],'Números','',tituloarticulo[27],contenidostema[27],articulos[27])
-      +cajatema(srcs[28],'Fechas','',tituloarticulo[28],contenidostema[28],articulos[28])
+      +cajatema(srcs[27],'Calculadora de mano','',tituloarticulo[27],contenidostema[27],articulos[27])
+      +cajatema(srcs[28],'Reloj digital','',tituloarticulo[28],contenidostema[28],articulos[28])

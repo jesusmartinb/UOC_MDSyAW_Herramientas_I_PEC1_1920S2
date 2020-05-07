@@ -2,13 +2,13 @@ extends ../templates/template
 block title
   title= titles[4]
 block header
-  h1 Aprende Abilidades Básicas
+  h1(role="header") Aprende Abilidades Básicas
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = 'herramientas'
 block main
-  main.herramientas#main
+  main(class="herramientas", id="main", role="main")
     +migas(menus[4])
-    h2 Herramientas
+    h2(role="header") Herramientas
     p Durante los primeros años del desarrollo web, el análisis del código y de posibles errores se tenía que hacer manualmente. Si bien algunos navegadores incorporaban una consola de JavaScript, no fue hasta la aparición de la extensión Firebug para el navegador Firefox, en 2006, que los navegadores dispusieron de herramientas que permitían inspeccionar y depurar el código HTML, CSS y JavaScript.
     section.grid
       +cajacategoria(titulo[18],'En este módulo conocemos el funcionamiento del inspector, del editor de estilos y de las herramientas para diseño responsive, tres de las herramientas básicas que conforman las herramientas para desarrolladores más habituales de los navegadores.',temas[18])

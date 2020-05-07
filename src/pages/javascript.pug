@@ -2,13 +2,13 @@ extends ../templates/template
 block title
   title= titles[3]
 block header
-  h1 Aprende Abilidades Básicas
+  h1(role="header") Aprende Abilidades Básicas
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = 'javascript'
 block main
-  main.javascript#main
+  main(class="javascript", id="main", role="main")
     +migas(menus[3])    
-    h2 JavaScript
+    h2(role="header") JavaScript
     p JavaScript es un lenguaje de scripting multiplataforma y orientado a objetos. Es un lenguaje pequeño y liviano. Dentro de un ambiente de host, JavaScript puede conectarse a los objetos de su ambiente y proporcionar control programático sobre ellos.
     section.grid
       +cajacategoria(titulo[9],'JavaScript contiene una librería estándar de objetos, tales como  Array, Date, y Math, y un conjunto central de elementos del lenguaje, tales como operadores, estructuras de control, y sentencias.',temas[9])
