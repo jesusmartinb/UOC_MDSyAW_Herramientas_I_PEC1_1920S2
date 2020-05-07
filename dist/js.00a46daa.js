@@ -24682,6 +24682,16 @@ setTimeout(function () {
   function validation(event) {
     if (event.matches) {
       boton.addEventListener('click', mostrarOcultarMenu);
+      boton.addEventListener('keydown', function (event) {
+        var codigo = event.which || event.keyCode;
+        console.log(codigo);
+
+        if (codigo === 13) {
+          mostrarOcultarMenu();
+        }
+
+        ;
+      });
     } else {
       boton.removeEventListener('click', mostrarOcultarMenu);
     }
@@ -24719,6 +24729,21 @@ setTimeout(function () {
         scrollTop: seccionOffsetTop - 85
       }, 1000);
     }
+  });
+  btnVolverArriba.on('keydown', function (event) {
+    String.fromCharCode(event.which);
+
+    if (event.which === 13) {
+      var seccionOffsetTop = (0, _jquery.default)('#main').offset().top;
+
+      if ((0, _jquery.default)(window).scrollTop() != 0) {
+        (0, _jquery.default)('html, body').stop().animate({
+          scrollTop: seccionOffsetTop - 85
+        }, 1000);
+      }
+    }
+
+    ;
   }); // Efecto slider del header
   // Seleccionando elementos en variables
 
@@ -24742,7 +24767,16 @@ setTimeout(function () {
     }
   }
 
-  btnSiguiente.on('click', moverDerecha); // Función para que el slide se mueva a la izquierda
+  btnSiguiente.on('click', moverDerecha);
+  btnSiguiente.on('keydown', function (event) {
+    String.fromCharCode(event.which);
+
+    if (event.which === 13) {
+      moverDerecha();
+    }
+
+    ;
+  }); // Función para que el slide se mueva a la izquierda
 
   function moverIzquierda() {
     if (!slider.is(':animated')) {
@@ -24756,7 +24790,16 @@ setTimeout(function () {
     }
   }
 
-  btnAnterior.on('click', moverIzquierda); // Intervalo para que el slide se mueva automáticamente
+  btnAnterior.on('click', moverIzquierda);
+  btnAnterior.on('keydown', function (event) {
+    String.fromCharCode(event.which);
+
+    if (event.which === 13) {
+      moverIzquierda();
+    }
+
+    ;
+  }); // Intervalo para que el slide se mueva automáticamente
 
   var intervalo = setInterval(moverDerecha, 5000);
 
@@ -24793,7 +24836,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50920" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58339" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -38,6 +38,13 @@ setTimeout(function () {
     function validation(event){
         if(event.matches){
             boton.addEventListener('click', mostrarOcultarMenu);
+            boton.addEventListener('keydown', function(event){
+                let codigo = event.which || event.keyCode;
+                console.log(codigo);
+                if(codigo === 13) {
+                    mostrarOcultarMenu();
+                };
+            });
         }else{
             boton.removeEventListener('click', mostrarOcultarMenu)
         }
@@ -90,6 +97,19 @@ $(document).ready(function () {
         }
     })
 
+    btnVolverArriba.on('keydown', function(event){
+        String.fromCharCode(event.which);
+        if(event.which === 13) {
+            var seccionOffsetTop = $('#main').offset().top
+
+            if($(window).scrollTop() != 0) {
+
+                $('html, body').stop().animate({scrollTop: seccionOffsetTop - 85}, 1000);
+            }
+
+        };
+    });
+
     // Efecto slider del header
     // Seleccionando elementos en variables
     var slider = $('#slider');
@@ -117,6 +137,12 @@ $(document).ready(function () {
 
     btnSiguiente.on('click', moverDerecha);
 
+    btnSiguiente.on('keydown', function(event){
+        String.fromCharCode(event.which);
+        if(event.which === 13) {
+            moverDerecha();
+        };
+    });
 
     // Función para que el slide se mueva a la izquierda
     function moverIzquierda() {
@@ -132,6 +158,13 @@ $(document).ready(function () {
     }
 
     btnAnterior.on('click', moverIzquierda);
+
+    btnAnterior.on('keydown', function(event){
+        String.fromCharCode(event.which);
+        if(event.which === 13) {
+            moverIzquierda();
+        };
+    });
 
     // Intervalo para que el slide se mueva automáticamente
     var intervalo = setInterval(moverDerecha, 5000);
