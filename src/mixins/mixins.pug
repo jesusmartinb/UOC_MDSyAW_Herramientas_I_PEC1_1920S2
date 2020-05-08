@@ -7,8 +7,8 @@ mixin caja(fa,titulo,contenido,hrefes)
       p= contenido
     .caja__boton
       a(href=`${hrefes}`, class="boton", id="leerMas", aria-labelledby="Leer Más") Leer más
-mixin enlace(hrefes,menus)
-  a(href=`${hrefes}`)= menus
+mixin enlace(hrefes,tab,menus)
+  a(href=`${hrefes}`, tabindex=`${tab}`)= menus
 mixin cajacategoria(titulo,contenido,temas)
   .caja
     .caja__titulo

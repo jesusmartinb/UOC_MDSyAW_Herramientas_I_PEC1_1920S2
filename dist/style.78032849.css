@@ -19,8 +19,13 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 0
 }
+
+*:focus {
+    border: 3px solid #fbff02;
+    border: 3px solid var(--foco);
+  }
 
 html {
   font-size: 10px;
@@ -324,6 +329,7 @@ body {
   }
 
 .subheader .subheader__logo a {
+      display: block;
       border-bottom: none;
     }
 
@@ -712,6 +718,7 @@ p {
   }
 
 .footer .footer__logo a {
+      display: block;
       border-bottom: none
     }
 

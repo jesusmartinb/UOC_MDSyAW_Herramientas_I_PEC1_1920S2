@@ -32,6 +32,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+  &:focus {
+    border: 3px solid var(--foco);
+  }
 }
 
 html {
@@ -269,6 +273,7 @@ body {
     margin: 0 auto;
 
     & a {
+      display: block;
       border-bottom: none;
     }
 
@@ -588,6 +593,7 @@ p {
     margin: 0 auto;
 
     & a {
+      display: block;
       border-bottom: none;
 
       & .clip-svg {
