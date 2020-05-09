@@ -8,7 +8,7 @@ block header
 block main
   main(class="html-tema1a2", id="main")
     +migasarticulos(hrefes[1],menus[1],temas[0],titulo[0],tituloarticulo[1])
-    article.article
+    div.article
       section.cabecera
         .cabecera__titulo
           h2= tituloarticulo[1]
@@ -22,7 +22,7 @@ block main
           .cabecera__antiguedad
             p Actualizado hace: 
               span.tiempo 10 días
-      section.caja__imagen
+      div.caja__imagen
         .caja__image
           img(src=`${srcs[1]}`, alt="Sobre una pantalla de monitor se observa el código del elemento head con elementos meta.", srcset="images/nhhtmlfunda2-464.jpg 464w, images/nhhtmlfunda2-644.jpg 644w, images/nhhtmlfunda2-834.jpg 834w, images/nhhtmlfunda2.jpg 1024w", sizes="(max-width:320px) 83vw, (max-width:560px) 88vw, (max-width:1210px) 92vw, 1122px")
       section.contenido

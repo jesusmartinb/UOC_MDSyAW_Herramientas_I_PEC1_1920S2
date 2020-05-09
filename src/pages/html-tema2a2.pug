@@ -8,7 +8,7 @@ block header
 block main
   main(class="html-tema2a2", id="main")
     +migasarticulos(hrefes[1],menus[1],temas[1],titulo[1],tituloarticulo[3])
-    article.article
+    div.article
       section.cabecera
         .cabecera__titulo
           h2= tituloarticulo[3]
@@ -22,7 +22,7 @@ block main
           .cabecera__antiguedad
             p Actualizado hace: 
               span.tiempo 6 días
-      section.caja__imagen
+      div.caja__imagen
         .caja__image
           img(src=`${srcs[2]}`, alt="Anagrama de un monitor con los simbolos que abren y cierran una etiqueta HTML.", srcset="images/nhhtmlprof2-464.jpg 464w, images/nhhtmlprof2-644.jpg 644w, images/nhhtmlprof2-834.jpg 834w, images/nhhtmlprof2.jpg 1024w", sizes="(max-width:320px) 83vw, (max-width:560px) 88vw, (max-width:1210px) 92vw, 1122px")
       section.contenido
@@ -54,7 +54,7 @@ block main
         p Las listas descriptivas utilizan la etiqueta &lt;dl&gt;, cada término se etiqueta con &lt;dt&gt; el llamado description term, y cada descripción con un elemento &lt;dd&gt; denominado description definition.
         div.video-flexible
           figure
-            iframe(class="video-youtube", width="560", height="315", src="https://www.youtube.com/embed/5xoRqQLrErQ", frameborder="0", allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
+            iframe(class="video-youtube", width="560", height="315", src="https://www.youtube.com/embed/5xoRqQLrErQ", allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
             figcaption Listas
         h3 Referencias
         ol

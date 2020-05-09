@@ -8,7 +8,7 @@ block header
 block main
   main(class="html-tema1a1", id="main")
     +migasarticulos(hrefes[1],menus[1],temas[0],titulo[0],tituloarticulo[0])
-    article.article
+    div.article
       section.cabecera
         .cabecera__titulo
           h2= tituloarticulo[0]
@@ -22,7 +22,7 @@ block main
           .cabecera__antiguedad
             p Actualizado hace: 
               span.tiempo 12 días
-      section.caja__imagen
+      div.caja__imagen
         .caja__image
           img(src=`${srcs[0]}`, alt="Etiquetas HTML que contienen el valor 5, escrito con tiza blanca y rosa sobre una pizarra negra", srcset="images/nhhtmlfunda1-464.jpg 464w, images/nhhtmlfunda1-644.jpg 644w, images/nhhtmlfunda1-834.jpg 834w, images/nhhtmlfunda1.jpg 1024w", sizes="(max-width:320px) 83vw, (max-width:560px) 88vw, (max-width:1210px) 92vw, 1122px")
       section.contenido
