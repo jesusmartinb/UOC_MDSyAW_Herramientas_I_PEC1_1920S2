@@ -2,7 +2,7 @@ extends ../templates/template
 block title
   title= titles[6]
 block header
-  h1(role="header") Aprende Abilidades Básicas
+  h1 Aprende Abilidades Básicas
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
@@ -24,7 +24,7 @@ block main
               span.tiempo 6 días
       section.caja__imagen
         .caja__image
-          img(src=`${srcs[2]}`, alt="Anagrama de un monitor con los simbolos que abren y cierran una etiqueta HTML.", srcset="images/nhhtmlprof2-464.jpg 464w, images/nhhtmlprof2-644.jpg 644w, images/nhhtmlprof2-834.jpg 834w, images/nhhtmlprof2.jpg 1024w")
+          img(src=`${srcs[2]}`, alt="Anagrama de un monitor con los simbolos que abren y cierran una etiqueta HTML.", srcset="images/nhhtmlprof2-464.jpg 464w, images/nhhtmlprof2-644.jpg 644w, images/nhhtmlprof2-834.jpg 834w, images/nhhtmlprof2.jpg 1024w", sizes="(max-width:320px) 83vw, (max-width:560px) 88vw, (max-width:1210px) 92vw, 1122px")
       section.contenido
         h3 Introducción
         p En otro artículo vimos las maneras básicas de etiquetar texto, pero hay muchas más. En este artículo veremos listas de descripciones.
@@ -41,7 +41,7 @@ block main
               |   &lt;dt&gt;&lt;abbr title="Hipertext Markup Lenguage"&gt;HTML (Hipertext Markup Lenguage)&lt;/abbr&gt;&lt;/dt&gt;
               |   &lt;dd&gt;Lenguaje de Marcado de Hipertexto. A diferencia de otros lenguajes no esta compuesto por comandos e instrucciones sino por un conjunto de elementos formados por etiquetas que organizan y declaran el proposito del contenido del elemento.&lt;/dd&gt;
               |   &lt;dt&gt;Etiqueta de apertura.&lt;/dt&gt;
-              |   &lt;dd&gt;Están constituidas por palabras clave del lenguaje y sus atributos ambos rodeados por un signo de < anterior y un signo > posterior.&lt;/dd&gt;
+              |   &lt;dd&gt;Están constituidas por palabras clave del lenguaje y sus atributos ambos rodeados por un signo de &lt; anterior y un signo &gt; posterior.&lt;/dd&gt;
               |   &lt;dt&gt;Etiqueta de cierre.&lt;/dt&gt;
               |   &lt;dd&gt;Están constituidas por palabras clave del lenguaje rodeadas por los signos  posterior.&lt;/dd&gt;
               |   &lt;dt&gt;Elemento.&lt;/dt&gt;
@@ -70,7 +70,7 @@ block main
       section.comentarios
         .comentario__formulario
           h3 Deja un Comentario
-          form.formulario(action="")
+          form.formulario
             fieldset
               p.nota Todos los campos son obligatorios.
               div.datos
@@ -81,6 +81,6 @@ block main
                 input(type="email", name="email", id="email", required)
               div
                 label(for="comentario", class="comenta") Comenta: 
-                textarea(name="comentario", rows="15", required)
+                textarea(id="comentario", name="comentario", rows="15", required)
               div
                 button(type="submit", class="boton") Enviar

@@ -2,7 +2,7 @@ extends ../templates/template
 block title
   title= titles[10]
 block header
-  h1(role="header") Aprende Abilidades Básicas
+  h1 Aprende Abilidades Básicas
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
@@ -24,7 +24,7 @@ block main
               span.tiempo 4 días
       section.caja__imagen
         .caja__image
-          img(src=`${srcs[8]}`, alt="Comenzando, boligrafo que apunta sobre un papel una regla CSS", srcset="images/nhcssfunda2-464.jpg 464w, images/nhcssfunda2-644.jpg 644w, images/nhcssfunda2-834.jpg 834w, images/nhcssfunda2.jpg 1024w")
+          img(src=`${srcs[8]}`, alt="Comenzando, boligrafo que apunta sobre un papel una regla CSS", srcset="images/nhcssfunda2-464.jpg 464w, images/nhcssfunda2-644.jpg 644w, images/nhcssfunda2-834.jpg 834w, images/nhcssfunda2.jpg 1024w", sizes="(max-width:320px) 83vw, (max-width:560px) 88vw, (max-width:1210px) 92vw, 1122px")
       section.contenido
         h3 Introducción
         p En este artículo tomaremos un documento 
@@ -94,7 +94,7 @@ block main
       section.comentarios
         .comentario__formulario
           h3 Deja un Comentario
-          form.formulario(action="")
+          form.formulario
             fieldset
               p.nota Todos los campos son obligatorios.
               div.datos
@@ -105,6 +105,6 @@ block main
                 input(type="email", name="email", id="email", required)
               div
                 label(for="comentario", class="comenta") Comenta: 
-                textarea(name="comentario", rows="15", required)
+                textarea(id="comentario", name="comentario", rows="15", required)
               div
                 button(type="submit", class="boton") Enviar

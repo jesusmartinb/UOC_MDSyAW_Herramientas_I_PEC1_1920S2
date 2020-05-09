@@ -21,7 +21,7 @@ mixin cajatema(srcs,alts,srcsets,tituloarticulo,contenidostema,articulos)
   .caja
     .caja__imagen
       .caja__image
-        img(src=`${srcs}`, alt=`${alts}`, srcset=`${srcsets}`)
+        img(src=`${srcs}`, alt=`${alts}`, srcset=`${srcsets}`, sizes="(max-width:1199px) 82vw, (max-widht:1404px) 41vw, 580px")
     .caja__textos
       .caja__titulo
         h3= tituloarticulo
