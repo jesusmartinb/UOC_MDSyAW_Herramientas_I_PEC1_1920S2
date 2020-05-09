@@ -6,12 +6,12 @@ block header
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main(class="html-tema2a1", id="main", role="main")
+  main(class="html-tema2a1", id="main")
     +migasarticulos(hrefes[1],menus[1],temas[1],titulo[1],tituloarticulo[2])
     article.article
       section.cabecera
         .cabecera__titulo
-          h2(role="header")= tituloarticulo[2]
+          h2= tituloarticulo[2]
         .cabecera__imagen
           .cabecera__image
             img(src="images/autor1.jpg", alt="Imagen del Autor del Artículo")
@@ -26,9 +26,9 @@ block main
         .caja__image
           img(src=`${srcs[2]}`, alt="En la interfaz de un navegador se observa una imagen con los eslabones de una cadena rotos y con las palabras 'BROKEN LINKS' (VINCULOS ROTOS).", srcset="images/nhhtmlprof1-464.jpg 464w, images/nhhtmlprof1-644.jpg 644w, images/nhhtmlprof1-834.jpg 834w, images/nhhtmlprof1.jpg 1024w")
       section.contenido
-        h3(role="header") Introducción
+        h3 Introducción
         p Los hipervínculos (o hiperenlaces, o simplemente enlaces) son lo que hace que la web sea la web. Veremos qué son exactamente, la sintaxis que debemos usar para crearlos, qué es una URL y las mejores prácticas para crearlos.
-        h3(role="header") Conceptos
+        h3 Conceptos
         dl
           dt Hipervínculo
           dd Un hipervínculo es un enlace, normalmente entre dos páginas web de un mismo sitio, pero un enlace también puede apuntar a una página de otro sitio web, a un fichero, a una imagen, etc. Para navegar al destino al que apunta el enlace, hemos de hacer clic sobre él. También se conocen como hiperenlaces, enlaces o links.
@@ -38,7 +38,7 @@ block main
             | hace referencia al identificador único de cada recurso disponible en Internet. Estas son esenciales para crear los enlaces, pero también se utilizan en otros elementos HTML como las imágenes y los formularios.
           dt Referencias
           dd Especifican donde se encuentra el archivo que se enlaza dentro del sistema de archivos.
-        h3(role="header") Ejemplo
+        h3 Ejemplo
         div(class="codigo")
           pre
             code.code
@@ -57,7 +57,7 @@ block main
               |    &lt;p&gt;&lt;a href="contacto.html" target="_blank"&gt;Contacto&lt;/a&gt;&lt;/p&gt;
               |  &lt;/body&gt;
               | &lt;/html&gt;
-        h3(role="header") Consideraciones
+        h3 Consideraciones
         p Un enlace se crea incluyendo un texto, o cualquier otro contenido, que queramos convertir en un enlace, como contenido de un elemento de ancla &lt;a&gt;, dándole un atributo href conocido como target, que contendra la dirección web (URL) hacía donde queremos que apunte el enlace.
         p Otros posibles atributos del elemento ancla son:
         table
@@ -125,19 +125,19 @@ block main
           li Utilizar referencias relativas siempre que sea posible.
           li Indicación clara de los recursos no HTML.
           li Utilizar el atributo download cuando se referencia una descarga.
-        h3(role="header") Referencias
+        h3 Referencias
         ol
           li
             a(href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks", target="_blank") https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks
               strong (Abre en una ventana nueva)
           li
             | HTML5 y CSS3 Domine los estándares de las aplicaciones web. Luc Van Lancker. Ediciones ENI. 2ª Edición 2013.
-        h3(role="header") Otros artículos sobre el tema
+        h3 Otros artículos sobre el tema
         p
           a(href="html-tema2a2.html") Marcado de Texto
       section.comentarios
         .comentario__formulario
-          h3(role="header") Deja un Comentario
+          h3 Deja un Comentario
           form.formulario(action="")
             fieldset
               p.nota Todos los campos son obligatorios.

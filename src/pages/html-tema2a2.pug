@@ -6,12 +6,12 @@ block header
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main(class="html-tema2a2", id="main", role="main")
+  main(class="html-tema2a2", id="main")
     +migasarticulos(hrefes[1],menus[1],temas[1],titulo[1],tituloarticulo[3])
     article.article
       section.cabecera
         .cabecera__titulo
-          h2(role="header")= tituloarticulo[3]
+          h2= tituloarticulo[3]
         .cabecera__imagen
           .cabecera__image
             img(src="images/autor1.jpg", alt="Imagen del Autor del Artículo")
@@ -26,13 +26,13 @@ block main
         .caja__image
           img(src=`${srcs[2]}`, alt="Anagrama de un monitor con los simbolos que abren y cierran una etiqueta HTML.", srcset="images/nhhtmlprof2-464.jpg 464w, images/nhhtmlprof2-644.jpg 644w, images/nhhtmlprof2-834.jpg 834w, images/nhhtmlprof2.jpg 1024w")
       section.contenido
-        h3(role="header") Introducción
+        h3 Introducción
         p En otro artículo vimos las maneras básicas de etiquetar texto, pero hay muchas más. En este artículo veremos listas de descripciones.
-        h3(role="header") Conceptos
+        h3 Conceptos
         dl
           dt Listas de descripción
           dd Su proposito es marcar un conjunto de elementos y sus descripciones asociadas.
-        h3(role="header") Ejemplo
+        h3 Ejemplo
         div(class="codigo")
           pre
             code.code
@@ -50,13 +50,13 @@ block main
               |   &lt;dd&gt;Proveen información adicional sobre el elemento y son siempre declarados dentro de la etiqueta de apertura. Su sintaxis esta constituida por un nombre seguido de un signo de igualdad y entre comillas dobles el valor del atributo.&lt;/dd&gt;
               | &lt;/dl&gt;
               |...
-        h3(role="header") Consideraciones
+        h3 Consideraciones
         p Las listas descriptivas utilizan la etiqueta &lt;dl&gt;, cada término se etiqueta con &lt;dt&gt; el llamado description term, y cada descripción con un elemento &lt;dd&gt; denominado description definition.
         div.video-flexible
           figure
             iframe(class="video-youtube", width="560", height="315", src="https://www.youtube.com/embed/5xoRqQLrErQ", frameborder="0", allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", allowfullscreen)
             figcaption Listas
-        h3(role="header") Referencias
+        h3 Referencias
         ol
           li
             a(href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Advanced_text_formatting", target="_blank") https://developer.mozilla.org/es/docs/Learn/HTML/Introduccion_a_HTML/Advanced_text_formatting
@@ -64,12 +64,12 @@ block main
           li
             a(href="https://www.youtube.com/watch?v=5xoRqQLrErQ", target="_blank") https://www.youtube.com/watch?v=3Jd5m7yaCB8
               strong (Abre en una ventana nueva)
-        h3(role="header") Otros artículos sobre el tema
+        h3 Otros artículos sobre el tema
         p
           a(href="html-tema2a1.html") Hipervínculos
       section.comentarios
         .comentario__formulario
-          h3(role="header") Deja un Comentario
+          h3 Deja un Comentario
           form.formulario(action="")
             fieldset
               p.nota Todos los campos son obligatorios.

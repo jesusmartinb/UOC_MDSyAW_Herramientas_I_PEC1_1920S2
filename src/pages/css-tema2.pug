@@ -6,9 +6,9 @@ block header
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main(class="css-tema2", id="main", role="main")
+  main(class="css-tema2", id="main")
     +migastemas(hrefes[2],menus[2],titulo[5])
-    h2(role="header")= titulo[5]
+    h2= titulo[5]
     p En este contenido veremos cómo funcionan la cascada y la herencia, dos de los mecanismos fundamentales de CSS. A la hora de elegir a qué partes de nuestro HTML queremos aplicar una regla CSS tenemos una gran variedad de selectores para elegir.
     section.grid-tema
       +cajatema(srcs[10],'Se observan un conjunto de reglas CSS','images/nhcssprof1-464.jpg 464w, images/nhcssprof1-644.jpg 644w, images/nhcssprof1-834.jpg 834w, images/nhcssprof1.jpg 1024w',tituloarticulo[10],contenidostema[10],articulos[10])

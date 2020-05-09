@@ -6,12 +6,12 @@ block header
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main(class="css-tema1a2", id="main", role="main")
+  main(class="css-tema1a2", id="main")
     +migasarticulos(hrefes[2],menus[2],temas[4],titulo[4],tituloarticulo[9])
     article.article
       section.cabecera
         .cabecera__titulo
-          h2(role="header")= tituloarticulo[9]
+          h2= tituloarticulo[9]
         .cabecera__imagen
           .cabecera__image
             img(src="images/autor1.jpg", alt="Imagen del Autor del Artículo")
@@ -26,13 +26,13 @@ block main
         .caja__image
           img(src=`${srcs[8]}`, alt="Comenzando, boligrafo que apunta sobre un papel una regla CSS", srcset="images/nhcssfunda2-464.jpg 464w, images/nhcssfunda2-644.jpg 644w, images/nhcssfunda2-834.jpg 834w, images/nhcssfunda2.jpg 1024w")
       section.contenido
-        h3(role="header") Introducción
+        h3 Introducción
         p En este artículo tomaremos un documento 
           abbr(title="Hipertext Markup Lenguage") HTML 
           | simple y le aplicaremos 
           abbr(title="Cascading Style Sheets") CSS
           |, aprendiendo algunas cosas prácticas sobre el lenguaje en el camino.
-        h3(role="header") Conceptos
+        h3 Conceptos
         dl
           dt Estilos en línea
           dd Asignación de estilos dentro de cada elemento por medio del atributo style
@@ -40,7 +40,7 @@ block main
           dd Asignación de estilos en el &lt;head&gt; del documento dentro de la etiqueta &lt;style&gt;.
           dt Estilos externos
           dd Utilización de un archivo externo con extensión .css para alvergar los estilos. Para enlazarlos con el documentos HTML se utiliza la etiqueta &lt;link&gt; dentro del head.
-        h3(role="header") Ejemplo
+        h3 Ejemplo
         div(class="codigo")
           pre
             code.code
@@ -64,7 +64,7 @@ block main
               |     &lt;/ul&gt;
               |  &lt;/body&gt;
               | &lt;/html&gt;
-        h3(role="header") Consideraciones
+        h3 Consideraciones
         p Lo primero que tenemos que hacer para agregar estilos al documento HTML anterior a traves de un archivo externo (la forma más común y útil de hacerlo), es vincularlo desde el encabezado del documento HTML.
         p Crearemos un archivo en la misma carpeta que el documento HTML y lo guardamos con el nombre style.css.
         p Para vincular style.css con el documento HTML agregamos la siguiente línea de código dentro del &lt;head&gt;.
@@ -82,18 +82,18 @@ block main
               |   background-color: green;  
               | }
         p Tras guardar los documentos HTML y CSS cargamos el documento HTML en el navegador y debemos observar que el texto del encabezado de nivel superior es de color rojo sobre un fondo de color verde.
-        h3(role="header") Referencias
+        h3 Referencias
         ol
           li
             a(href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started", target="_blank") https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started
               strong (Abre en una ventana nueva)
           li El gran libro de HTML5, CSS3 & JavaScript. Gauchat, J.D. Marcombo. 2ª Edición 2014.
-        h3(role="header") Otros artículos sobre el tema
+        h3 Otros artículos sobre el tema
         p
           a(href="css-tema1a1.html") Que es CSS
       section.comentarios
         .comentario__formulario
-          h3(role="header") Deja un Comentario
+          h3 Deja un Comentario
           form.formulario(action="")
             fieldset
               p.nota Todos los campos son obligatorios.

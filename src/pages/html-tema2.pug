@@ -6,9 +6,9 @@ block header
   p Programa Sitios Web con HTML5, CSS y JavaScript
   -let active = ''
 block main
-  main(class="html-tema2", id="main", role="main")
+  main(class="html-tema2", id="main")
     +migastemas(hrefes[1],menus[1],titulo[1])
-    h2(role="header")= titulo[1]
+    h2= titulo[1]
     p En la primera unidad hemos aprendido a crear nuestras primeras páginas web y aplicarles estilos. Pero existen todavía bastantes elementos HTML, que no conocemos. Sigamos, pues, nuestro camino.
     section.grid-tema
       +cajatema(srcs[2],'En la interfaz de un navegador se observa una imagen con los eslabones de una cadena rotos y con las palabras "BROKEN LINKS" (VINCULOS ROTOS).','images/nhhtmlprof1-464.jpg 464w, images/nhhtmlprof1-644.jpg 644w, images/nhhtmlprof1-834.jpg 834w, images/nhhtmlprof1.jpg 1024w',tituloarticulo[2],contenidostema[2],articulos[2])
