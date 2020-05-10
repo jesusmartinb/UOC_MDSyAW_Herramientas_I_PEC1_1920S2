@@ -24706,7 +24706,93 @@ setTimeout(function () {
       menu.classList.add('is-active');
     }
   }
-}, 100);
+}, 100); // Funcionalidad confirmación envío Formulario Subscripción
+
+var subscribe = document.getElementById('subscribe');
+var subscribirme = document.getElementById('subscribirme');
+var confirma = document.getElementById('confirma');
+subscribirme.addEventListener('click', confirmarEnvio);
+
+function confirmarEnvio(event) {
+  event.preventDefault();
+  var subscribes = subscribe.value;
+
+  if (subscribes === "") {
+    confirma.style.display = 'block';
+    confirma.style.color = 'red';
+    confirma.innerHTML = 'Introduce tu Correo Electrónico, por favor.';
+  } else {
+    confirma.style.display = 'block';
+    confirma.style.color = '#00ffd5';
+    confirma.innerHTML = 'E-mail enviado';
+  }
+
+  setTimeout(function () {
+    confirma.style.display = 'none';
+    subscribe.value = '';
+  }, 4000);
+} // Funcionalidad confirmación envío Formulario Comentario
+
+
+var nombre = document.getElementById('nombre');
+var email = document.getElementById('email');
+var comentario = document.getElementById('comentario');
+var submit = document.getElementById('submit');
+var confirmNombre = document.getElementById('confirmNombre');
+var confirmEmail = document.getElementById('confirmEmail');
+var confirmText = document.getElementById('confirmText');
+var confirmForm = document.getElementById('confirmForm');
+submit.addEventListener('click', confirmEnvio);
+
+function confirmEnvio(event) {
+  event.preventDefault();
+  var nombres = nombre.value;
+  var emails = email.value;
+  var comentarios = comentario.value;
+
+  if (nombres === "") {
+    confirmNombre.style.display = 'block';
+    confirmNombre.style.color = 'red';
+    confirmNombre.innerHTML = 'Introduce tu Nombre, por favor.';
+    setTimeout(function () {
+      confirmNombre.style.display = 'none';
+      nombre.value = '';
+    }, 5000);
+  }
+
+  if (emails === "") {
+    confirmEmail.style.display = 'block';
+    confirmEmail.style.color = 'red';
+    confirmEmail.innerHTML = 'Introduce tu Correo Electrónico, por favor.';
+    setTimeout(function () {
+      confirmEmail.style.display = 'none';
+      email.value = '';
+    }, 5000);
+  }
+
+  if (comentarios === "") {
+    confirmText.style.display = 'block';
+    confirmText.style.color = 'red';
+    confirmText.innerHTML = 'Introduce tus Comentarios, por favor.';
+    setTimeout(function () {
+      confirmText.style.display = 'none';
+      comentario.value = '';
+    }, 5000);
+  }
+
+  if (nombres != "" && emails != "" && comentarios != "") {
+    confirmForm.style.display = 'block';
+    confirmForm.style.color = '#00ff00';
+    confirmForm.innerHTML = 'Comentario enviado';
+    setTimeout(function () {
+      confirmForm.style.display = 'none';
+      nombre.value = '';
+      email.value = '';
+      comentario.value = '';
+    }, 5000);
+  }
+}
+
 (0, _jquery.default)(document).ready(function () {
   // Mostrar y ocultar el botón "Volver arriba"
   var btnVolverArriba = (0, _jquery.default)('#btnVolverArriba');
@@ -24836,7 +24922,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54445" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58600" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

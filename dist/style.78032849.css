@@ -2,7 +2,7 @@
   --fondo: aliceblue;
   --fondo-footer: #555;
   --texto: #333;
-  --texto-footer: white;
+  --texto-footer: #ffffff;
   --contraste: rgb(0, 126, 137);
   --active: rgb(255, 60, 0);
   --bgcactive: #ccc;
@@ -690,7 +690,7 @@ p {
   padding: 4rem 3rem;
   background-color: #555;
   background-color: var(--fondo-footer);
-  color: white;
+  color: #ffffff;
   color: var(--texto-footer);
   display: grid;
   grid-template-columns: 1fr;
@@ -805,6 +805,12 @@ p {
             border: 3px solid #fbff02;
             border: 3px solid var(--foco);
           }
+
+.footer .footer__subs .footer__form form .confirma {
+          display: none;
+          font-size: 2rem;
+          font-weight: bold;
+        }
 
 .footer .footer__subs .footer__form form input[type="submit"].submit {
           display: inline-block;
@@ -1286,6 +1292,12 @@ p {
               cursor: pointer;
               outline: none;
             }
+
+.article .comentarios .comentario__formulario form fieldset div p.confirm {
+            display: none;
+            font-size: 2.5rem;
+            font-weight: bold;
+          }
 
 
 /*# sourceMappingURL=/style.78032849.css.map */

@@ -60,3 +60,24 @@ mixin migasarticulos(hrefes,menus,temas,titulo,tituloarticulo)
       li
         a(href=`${temas}`)= titulo
       li= tituloarticulo
+mixin comentarioFormulario()
+  .comentario__formulario
+            h3 Deja un Comentario
+            form.formulario
+              fieldset
+                p.nota Todos los campos son obligatorios.
+                div.datos
+                  label(for="nombre") Nombre: 
+                  input(type="text", name="nombre", id="nombre", required)
+                  p(class="confirm", id="confirmNombre", role="status")
+                div.datos
+                  label(for="email") E-mail:  
+                  input(type="email", name="email", id="email", required)
+                  p(class="confirm", id="confirmEmail", role="status")
+                div
+                  label(for="comentario", class="comenta") Comenta: 
+                  textarea(id="comentario", name="comentario", rows="15", required)
+                  p(class="confirm", id="confirmText", role="status")
+                div
+                  button(type="submit", class="boton", id="submit") Enviar
+                  p(class="confirm", id="confirmForm", role="status")

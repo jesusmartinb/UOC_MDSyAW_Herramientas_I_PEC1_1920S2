@@ -68,19 +68,4 @@ block main
         p
           a(href="html-tema2a1.html") Hipervínculos
       section.comentarios
-        .comentario__formulario
-          h3 Deja un Comentario
-          form.formulario
-            fieldset
-              p.nota Todos los campos son obligatorios.
-              div.datos
-                label(for="nombre") Nombre: 
-                input(type="text", name="nombre", id="nombre", required)
-              div.datos
-                label(for="email") E-mail:  
-                input(type="email", name="email", id="email", required)
-              div
-                label(for="comentario", class="comenta") Comenta: 
-                textarea(id="comentario", name="comentario", rows="15", required)
-              div
-                button(type="submit", class="boton") Enviar
+        +comentarioFormulario()

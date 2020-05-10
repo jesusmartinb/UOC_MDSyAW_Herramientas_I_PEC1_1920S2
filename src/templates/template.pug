@@ -107,8 +107,9 @@ html(lang="es")
                     h4 Subscribete
                     p Consigue los últimos artículos 
                 .footer__form
-                    form
+                    form(action="procesarSubs.html", method="POST")
                         input(type="email", name="subscribe", id="subscribe", placeholder="Tu e-mail", class="input", required)
                         i(class="far fa-envelope", aria-hidden="true", role="img")
-                        input(type="submit", value="Subscribirme", class="submit", tabindex="2")
+                        p(class="confirma", id="confirma", role="status")
+                        input(type="submit", id="subscribirme", value="Subscribirme", class="submit", tabindex="2")
         script(src="./js/index.js")

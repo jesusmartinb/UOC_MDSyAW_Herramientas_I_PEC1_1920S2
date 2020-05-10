@@ -2,7 +2,7 @@
   --fondo: aliceblue;
   --fondo-footer: #555;
   --texto: #333;
-  --texto-footer: white;
+  --texto-footer: #ffffff;
   --contraste: rgb(0, 126, 137);
   --active: rgb(255, 60, 0);
   --bgcactive: #ccc;
@@ -664,6 +664,12 @@ p {
           }
         }
 
+        & .confirma {
+          display: none;
+          font-size: 2rem;
+          font-weight: bold;
+        }
+
         & input[type="submit"].submit {
           display: inline-block;
           width: 20rem;
@@ -1086,6 +1092,12 @@ p {
               cursor: pointer;
               outline: none;
             }
+          }
+
+          & p.confirm {
+            display: none;
+            font-size: 2.5rem;
+            font-weight: bold;
           }
         }
       }

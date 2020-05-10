@@ -123,19 +123,4 @@ block main
               span.tiempo 3 días
           .comentario__comentario
             p Interesante artículo.
-        .comentario__formulario
-          h3 Deja un Comentario
-          form.formulario
-            fieldset
-              p.nota Todos los campos son obligatorios.
-              div.datos
-                label(for="nombre") Nombre: 
-                input(type="text", name="nombre", id="nombre", required)
-              div.datos
-                label(for="email") E-mail:  
-                input(type="email", name="email", id="email", required)
-              div
-                label(for="comentario", class="comenta") Comenta: 
-                textarea(id="comentario", name="comentario", rows="15", required)
-              div
-                button(type="submit", class="boton") Enviar
+        +comentarioFormulario()
