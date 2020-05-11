@@ -27,11 +27,15 @@ block main
           img(src=`${srcs[0]}`, alt="Etiquetas HTML que contienen el valor 5, escrito con tiza blanca y rosa sobre una pizarra negra", srcset="images/nhhtmlfunda1-464.jpg 464w, images/nhhtmlfunda1-644.jpg 644w, images/nhhtmlfunda1-834.jpg 834w, images/nhhtmlfunda1.jpg 1024w", sizes="(max-width:320px) 83vw, (max-width:560px) 88vw, (max-width:1210px) 92vw, 1122px")
       section.contenido
         h3 Introducción
-        p 
-          abbr(title="Hipertext Markup Lenguage") HTML 
-          | Lenguaje de marcado de hipertexto no es un lenguaje de programación; Es un lenguaje de marcado utilizado para indicarle a su navegador cómo estructurar las páginas web que visita. Puede ser tan complicado o tan simple como el desarrollador web lo desee. 
-          abbr(title="Hipertext Markup Lenguage") HTML 
-          | consiste en una serie de elementos , que usted usa para encerrar, ajustar o marcar diferentes partes del contenido para que aparezca o actúe de cierta manera. Las etiquetas adjuntas pueden convertir un poco de contenido en un hipervínculo para vincular a otra página en la web, poner en cursiva las palabras, etc.
+        .intro
+          .image__intro
+            img(src="images/HTML5_intro.png", alt="Logotipo de HTML5")
+          .text__intro
+            p 
+              abbr(title="Hipertext Markup Lenguage") HTML 
+              | Lenguaje de marcado de hipertexto no es un lenguaje de programación; Es un lenguaje de marcado utilizado para indicarle a su navegador cómo estructurar las páginas web que visita. Puede ser tan complicado o tan simple como el desarrollador web lo desee. 
+              abbr(title="Hipertext Markup Lenguage") HTML 
+              | consiste en una serie de elementos , que usted usa para encerrar, ajustar o marcar diferentes partes del contenido para que aparezca o actúe de cierta manera. Las etiquetas adjuntas pueden convertir un poco de contenido en un hipervínculo para vincular a otra página en la web, poner en cursiva las palabras, etc.
         h3 Conceptos
         dl
           dt

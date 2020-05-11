@@ -27,12 +27,16 @@ block main
           img(src=`${srcs[8]}`, alt="Que es CSS, Siglas de Cascading Style Sheets CSS sobre un fondo rojo", srcset="images/nhcssfunda1-464.jpg 464w, images/nhcssfunda1-644.jpg 644w, images/nhcssfunda1-834.jpg 834w, images/nhcssfunda1.jpg 1024w", sizes="(max-width:320px) 83vw, (max-width:560px) 88vw, (max-width:1210px) 92vw, 1122px")
       section.contenido
         h3 Introducción
-        p 
-          abbr(lang="en", title="Cascading Style Sheets") CSS 
-          | #[span(lang="en")](Cascading Style Sheets) 
-          |le permite crear páginas web de excelente apariencia, pero ¿cómo funciona bajo el capó? Este artículo explica qué es 
-          abbr(lang="en", title="Cascading Style Sheets") CSS
-          |, con un simple ejemplo de sintaxis, y también cubre algunos términos clave sobre el lenguaje.
+        .intro
+          .image__intro
+            img(src="images/CSS3.svg", alt="Logotipo de CSS3")
+          .text__intro
+            p 
+              abbr(lang="en", title="Cascading Style Sheets") CSS 
+              | #[span(lang="en")](Cascading Style Sheets) 
+              |le permite crear páginas web de excelente apariencia, pero ¿cómo funciona bajo el capó? Este artículo explica qué es 
+              abbr(lang="en", title="Cascading Style Sheets") CSS
+              |, con un simple ejemplo de sintaxis, y también cubre algunos términos clave sobre el lenguaje.
         h3 Conceptos
         dl
           dt
