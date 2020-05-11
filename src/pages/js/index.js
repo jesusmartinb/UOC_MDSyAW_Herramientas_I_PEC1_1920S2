@@ -78,10 +78,14 @@ function confirmarEnvio(event) {
         confirma.style.display = 'block';
         confirma.style.color = 'red';
         confirma.innerHTML = 'Introduce tu Correo Electrónico, por favor.';
-    }else{
+    }else if(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(subscribes)) {
         confirma.style.display = 'block';
         confirma.style.color = '#00ffd5';
         confirma.innerHTML = 'E-mail enviado';
+    }else{
+        confirma.style.display = 'block';
+        confirma.style.color = 'red';
+        confirma.innerHTML = 'Introduce un Correo Electrónico valido, por favor.';
     }
     setTimeout(function () {
         confirma.style.display = 'none';
@@ -98,6 +102,7 @@ let confirmNombre = document.getElementById('confirmNombre');
 let confirmEmail = document.getElementById('confirmEmail');
 let confirmText = document.getElementById('confirmText');
 let confirmForm = document.getElementById('confirmForm');
+let emailCorrecto = false;
 
 submit.addEventListener('click',confirmEnvio);
 
@@ -127,6 +132,17 @@ function confirmEnvio(event) {
             confirmEmail.style.display = 'none';
             email.value = '';
         },5000)
+    }else if(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(emails)) {
+        emailCorrecto = true;
+    }else{
+        confirmEmail.style.display = 'block';
+        confirmEmail.style.color = 'red';
+        confirmEmail.innerHTML = 'Introduce un Correo Electrónico valido, por favor.';
+
+        setTimeout(function () {
+            confirmEmail.style.display = 'none';
+            email.value = '';
+        },5000)
     }
     if(comentarios === ""){
         confirmText.style.display = 'block';
@@ -138,7 +154,7 @@ function confirmEnvio(event) {
             comentario.value = '';
         },5000)
     }
-    if(nombres != "" && emails != "" && comentarios != "") {
+    if(nombres != "" && emails != "" && emailCorrecto && comentarios != "") {
         confirmForm.style.display = 'block';
         confirmForm.style.color = '#00ff00';
         confirmForm.innerHTML = 'Comentario enviado';

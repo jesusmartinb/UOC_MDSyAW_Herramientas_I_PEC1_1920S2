@@ -24721,10 +24721,14 @@ function confirmarEnvio(event) {
     confirma.style.display = 'block';
     confirma.style.color = 'red';
     confirma.innerHTML = 'Introduce tu Correo Electrónico, por favor.';
-  } else {
+  } else if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(subscribes)) {
     confirma.style.display = 'block';
     confirma.style.color = '#00ffd5';
     confirma.innerHTML = 'E-mail enviado';
+  } else {
+    confirma.style.display = 'block';
+    confirma.style.color = 'red';
+    confirma.innerHTML = 'Introduce un Correo Electrónico valido, por favor.';
   }
 
   setTimeout(function () {
@@ -24742,6 +24746,7 @@ var confirmNombre = document.getElementById('confirmNombre');
 var confirmEmail = document.getElementById('confirmEmail');
 var confirmText = document.getElementById('confirmText');
 var confirmForm = document.getElementById('confirmForm');
+var emailCorrecto = false;
 submit.addEventListener('click', confirmEnvio);
 
 function confirmEnvio(event) {
@@ -24768,6 +24773,16 @@ function confirmEnvio(event) {
       confirmEmail.style.display = 'none';
       email.value = '';
     }, 5000);
+  } else if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(emails)) {
+    emailCorrecto = true;
+  } else {
+    confirmEmail.style.display = 'block';
+    confirmEmail.style.color = 'red';
+    confirmEmail.innerHTML = 'Introduce un Correo Electrónico valido, por favor.';
+    setTimeout(function () {
+      confirmEmail.style.display = 'none';
+      email.value = '';
+    }, 5000);
   }
 
   if (comentarios === "") {
@@ -24780,7 +24795,7 @@ function confirmEnvio(event) {
     }, 5000);
   }
 
-  if (nombres != "" && emails != "" && comentarios != "") {
+  if (nombres != "" && emails != "" && emailCorrecto && comentarios != "") {
     confirmForm.style.display = 'block';
     confirmForm.style.color = '#00ff00';
     confirmForm.innerHTML = 'Comentario enviado';
@@ -24922,7 +24937,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58600" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53237" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
