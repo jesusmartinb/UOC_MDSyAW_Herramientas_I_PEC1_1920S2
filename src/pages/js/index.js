@@ -64,112 +64,118 @@ setTimeout(function () {
 
 
 // Funcionalidad confirmación envío Formulario Subscripción
-let subscribe = document.getElementById('subscribe');
-let subscribirme = document.getElementById('subscribirme');
-let confirma = document.getElementById('confirma');
+setTimeout(function () {
+    let subscribe = document.getElementById('subscribe');
+    let subscribirme = document.getElementById('subscribirme');
+    let confirma = document.getElementById('confirma');
 
-subscribirme.addEventListener('click', confirmarEnvio);
+    subscribirme.addEventListener('click', confirmarEnvio);
 
 
-function confirmarEnvio(event) {
-    event.preventDefault();
-    let subscribes = subscribe.value;
-    if(subscribes === "") {
-        confirma.style.display = 'block';
-        confirma.style.color = 'red';
-        confirma.innerHTML = 'Introduce tu Correo Electrónico, por favor.';
-    }else if(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(subscribes)) {
-        confirma.style.display = 'block';
-        confirma.style.color = '#00ffd5';
-        confirma.innerHTML = 'E-mail enviado';
-    }else{
-        confirma.style.display = 'block';
-        confirma.style.color = 'red';
-        confirma.innerHTML = 'Introduce un Correo Electrónico valido, por favor.';
+    function confirmarEnvio(event) {
+        event.preventDefault();
+        let subscribes = subscribe.value;
+        if(subscribes === "") {
+            confirma.style.display = 'block';
+            confirma.style.color = 'red';
+            confirma.innerHTML = 'Introduce tu Correo Electrónico, por favor.';
+        }else if(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(subscribes)) {
+            confirma.style.display = 'block';
+            confirma.style.color = '#00ffd5';
+            confirma.innerHTML = 'E-mail enviado';
+        }else{
+            confirma.style.display = 'block';
+            confirma.style.color = 'red';
+            confirma.innerHTML = 'Introduce un Correo Electrónico valido, por favor.';
+        }
+        setTimeout(function () {
+            confirma.style.display = 'none';
+            subscribe.value = '';
+        },4000)
     }
-    setTimeout(function () {
-        confirma.style.display = 'none';
-        subscribe.value = '';
-    },4000)
-}
+},10)
+
+
 
 // Funcionalidad confirmación envío Formulario Comentario
-let nombre = document.getElementById('nombre');
-let email = document.getElementById('email');
-let comentario = document.getElementById('comentario');
-let submit = document.getElementById('submit');
-let confirmNombre = document.getElementById('confirmNombre');
-let confirmEmail = document.getElementById('confirmEmail');
-let confirmText = document.getElementById('confirmText');
-let confirmForm = document.getElementById('confirmForm');
-let emailCorrecto = false;
+setTimeout(function () {
+    let nombre = document.getElementById('nombre');
+    let email = document.getElementById('email');
+    let comentario = document.getElementById('comentario');
+    let submit = document.getElementById('submit');
+    let confirmNombre = document.getElementById('confirmNombre');
+    let confirmEmail = document.getElementById('confirmEmail');
+    let confirmText = document.getElementById('confirmText');
+    let confirmForm = document.getElementById('confirmForm');
+    let emailCorrecto = false;
 
-submit.addEventListener('click',confirmEnvio);
+    submit.addEventListener('click',confirmEnvio);
 
 
-function confirmEnvio(event) {
-    event.preventDefault();
-    let nombres = nombre.value;
-    let emails = email.value;
-    let comentarios = comentario.value;
+    function confirmEnvio(event) {
+        event.preventDefault();
+        let nombres = nombre.value;
+        let emails = email.value;
+        let comentarios = comentario.value;
 
-    if(nombres === ""){
-        confirmNombre.style.display = 'block';
-        confirmNombre.style.color = 'red';
-        confirmNombre.innerHTML = 'Introduce tu Nombre, por favor.';
+        if(nombres === ""){
+            confirmNombre.style.display = 'block';
+            confirmNombre.style.color = 'red';
+            confirmNombre.innerHTML = 'Introduce tu Nombre, por favor.';
 
-        setTimeout(function () {
-            confirmNombre.style.display = 'none';
-            nombre.value = '';
-        },5000)
+            setTimeout(function () {
+                confirmNombre.style.display = 'none';
+                nombre.value = '';
+            },5000)
+        }
+        if(emails === ""){
+            confirmEmail.style.display = 'block';
+            confirmEmail.style.color = 'red';
+            confirmEmail.innerHTML = 'Introduce tu Correo Electrónico, por favor.';
+
+            setTimeout(function () {
+                confirmEmail.style.display = 'none';
+                email.value = '';
+            },5000)
+        }else if(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(emails)) {
+            emailCorrecto = true;
+        }else{
+            confirmEmail.style.display = 'block';
+            confirmEmail.style.color = 'red';
+            confirmEmail.innerHTML = 'Introduce un Correo Electrónico valido, por favor.';
+
+            setTimeout(function () {
+                confirmEmail.style.display = 'none';
+                email.value = '';
+            },5000)
+        }
+        if(comentarios === ""){
+            confirmText.style.display = 'block';
+            confirmText.style.color = 'red';
+            confirmText.innerHTML = 'Introduce tus Comentarios, por favor.';
+
+            setTimeout(function () {
+                confirmText.style.display = 'none';
+                comentario.value = '';
+            },5000)
+        }
+        if(nombres != "" && emails != "" && emailCorrecto && comentarios != "") {
+            confirmForm.style.display = 'block';
+            confirmForm.style.color = '#00ff00';
+            confirmForm.innerHTML = 'Comentario enviado';
+
+            setTimeout(function () {
+                confirmForm.style.display = 'none';
+                
+                nombre.value = '';
+                email.value = '';
+                comentario.value = '';
+                emailCorrecto = false;
+            },5000)
+        }
+
     }
-    if(emails === ""){
-        confirmEmail.style.display = 'block';
-        confirmEmail.style.color = 'red';
-        confirmEmail.innerHTML = 'Introduce tu Correo Electrónico, por favor.';
-
-        setTimeout(function () {
-            confirmEmail.style.display = 'none';
-            email.value = '';
-        },5000)
-    }else if(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(emails)) {
-        emailCorrecto = true;
-    }else{
-        confirmEmail.style.display = 'block';
-        confirmEmail.style.color = 'red';
-        confirmEmail.innerHTML = 'Introduce un Correo Electrónico valido, por favor.';
-
-        setTimeout(function () {
-            confirmEmail.style.display = 'none';
-            email.value = '';
-        },5000)
-    }
-    if(comentarios === ""){
-        confirmText.style.display = 'block';
-        confirmText.style.color = 'red';
-        confirmText.innerHTML = 'Introduce tus Comentarios, por favor.';
-
-        setTimeout(function () {
-            confirmText.style.display = 'none';
-            comentario.value = '';
-        },5000)
-    }
-    if(nombres != "" && emails != "" && emailCorrecto && comentarios != "") {
-        confirmForm.style.display = 'block';
-        confirmForm.style.color = '#00ff00';
-        confirmForm.innerHTML = 'Comentario enviado';
-
-        setTimeout(function () {
-            confirmForm.style.display = 'none';
-            
-            nombre.value = '';
-            email.value = '';
-            comentario.value = '';
-        },5000)
-    }
-
-}
-
+},10)
 
 
 $(document).ready(function () {
