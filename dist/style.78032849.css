@@ -1064,6 +1064,13 @@ p {
           max-width: 160px;
         }
 
+.article .contenido .image__consid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
 .article .contenido dl {
       padding: 1rem 2rem
     }

@@ -897,6 +897,13 @@ p {
       }
     }
 
+    & .image__consid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
     & dl {
       padding: 1rem 2rem;
 
