@@ -14,7 +14,7 @@ block main
           h2= tituloarticulo[3]
         .cabecera__imagen
           .cabecera__image
-            img(src="images/autor1.jpg", alt="Imagen del Autor del Artículo")
+            img(data-src="images/autor1.jpg", alt="Imagen del Autor del Artículo", loading="lazy", class="lazyload")
         .cabecera__textos
           .cabecera__autor
             p Autor: 
@@ -24,7 +24,7 @@ block main
               span.tiempo 6 días
       div.caja__imagen
         .caja__image
-          img(src=`${srcs[2]}`, alt="Anagrama de un monitor con los simbolos que abren y cierran una etiqueta HTML.", srcset="images/nhhtmlprof2-464.jpg 464w, images/nhhtmlprof2-644.jpg 644w, images/nhhtmlprof2-834.jpg 834w, images/nhhtmlprof2.jpg 1024w", sizes="(max-width:320px) 83vw, (max-width:560px) 88vw, (max-width:1210px) 92vw, 1122px")
+          img(data-src=`${srcs[2]}`, alt="Anagrama de un monitor con los simbolos que abren y cierran una etiqueta HTML.", srcset="images/nhhtmlprof2-464.jpg 464w, images/nhhtmlprof2-644.jpg 644w, images/nhhtmlprof2-834.jpg 834w, images/nhhtmlprof2.jpg 1024w", sizes="(max-width:320px) 83vw, (max-width:560px) 88vw, (max-width:1210px) 92vw, 1122px", loading="lazy", class="lazyload")
       section.contenido
         h3 Introducción
         p En otro artículo vimos las maneras básicas de etiquetar texto, pero hay muchas más. En este artículo veremos listas de descripciones.

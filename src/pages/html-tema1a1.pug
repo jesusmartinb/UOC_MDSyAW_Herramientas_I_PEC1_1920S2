@@ -14,7 +14,7 @@ block main
           h2= tituloarticulo[0]
         .cabecera__imagen
           .cabecera__image
-            img(src="images/autor1.jpg", alt="Imagen del Autor del Artículo")
+            img(data-src="images/autor1.jpg", alt="Imagen del Autor del Artículo", loading="lazy", class="lazyload")
         .cabecera__textos
           .cabecera__autor
             p Autor: 
@@ -24,7 +24,7 @@ block main
               span.tiempo 12 días
       div.caja__imagen
         .caja__image
-          img(src=`${srcs[0]}`, alt="Etiquetas HTML que contienen el valor 5, escrito con tiza blanca y rosa sobre una pizarra negra", srcset="images/nhhtmlfunda1-464.jpg 464w, images/nhhtmlfunda1-644.jpg 644w, images/nhhtmlfunda1-834.jpg 834w, images/nhhtmlfunda1.jpg 1024w", sizes="(max-width:320px) 83vw, (max-width:560px) 88vw, (max-width:1210px) 92vw, 1122px")
+          img(data-src=`${srcs[0]}`, alt="Etiquetas HTML que contienen el valor 5, escrito con tiza blanca y rosa sobre una pizarra negra", srcset="images/nhhtmlfunda1-464.jpg 464w, images/nhhtmlfunda1-644.jpg 644w, images/nhhtmlfunda1-834.jpg 834w, images/nhhtmlfunda1.jpg 1024w", sizes="(max-width:320px) 83vw, (max-width:560px) 88vw, (max-width:1210px) 92vw, 1122px", loading="lazy", class="lazyload")
       section.contenido
         h3 Introducción
         .intro
@@ -69,7 +69,7 @@ block main
           picture
             source(media="(min-width: 1200px)", srcset="images/html5-apis.png 1920w", sizes="80vw")
             source(media="(min-width: 730px)", srcset="images/html5-periodictable.jpg 1012w", sizes="85vw")
-            img(src="images/html5-tagcloud.png", alt="Logotipo de HTML5 rodeado de una nube de etiquetas de términos relacionados con la tecnologías HTML5.", srcset="images/html5-tagcloud.png 800w", sizes="80vw")
+            img(data-src="images/html5-tagcloud.png", alt="Logotipo de HTML5 rodeado de una nube de etiquetas de términos relacionados con la tecnologías HTML5.", srcset="images/html5-tagcloud.png 800w", sizes="80vw", loading="lazy", class="lazyload")
         p Aunque cada una de las etiquetas html define sus propios atributos, , encontramos algunos comunes a casi todas las etiquetas, dividiendose estos en 4 grupos atendiendo a su funcionalidad:
         ul
           li Atributos básicos o genéricos.
@@ -122,7 +122,7 @@ block main
             h3 Comentarios
         .comentario__imagen
           .comentario__image
-            img(src="images/comentarista1.jpg", alt="Imagen del comentarista")
+            img(data-src="images/comentarista1.jpg", alt="Imagen del comentarista", loading="lazy", class="lazyload")
         .comentario__textos
           .comentario__autor
             p Escrito por: 

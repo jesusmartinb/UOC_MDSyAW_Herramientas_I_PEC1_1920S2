@@ -14,7 +14,7 @@ block main
           h2= tituloarticulo[9]
         .cabecera__imagen
           .cabecera__image
-            img(src="images/autor1.jpg", alt="Imagen del Autor del Artículo")
+            img(data-src="images/autor1.jpg", alt="Imagen del Autor del Artículo", loading="lazy", class="lazyload")
         .cabecera__textos
           .cabecera__autor
             p Autor: 
@@ -24,7 +24,7 @@ block main
               span.tiempo 4 días
       div.caja__imagen
         .caja__image
-          img(src=`${srcs[8]}`, alt="Comenzando, boligrafo que apunta sobre un papel una regla CSS", srcset="images/nhcssfunda2-464.jpg 464w, images/nhcssfunda2-644.jpg 644w, images/nhcssfunda2-834.jpg 834w, images/nhcssfunda2.jpg 1024w", sizes="(max-width:320px) 83vw, (max-width:560px) 88vw, (max-width:1210px) 92vw, 1122px")
+          img(data-src=`${srcs[8]}`, alt="Comenzando, boligrafo que apunta sobre un papel una regla CSS", srcset="images/nhcssfunda2-464.jpg 464w, images/nhcssfunda2-644.jpg 644w, images/nhcssfunda2-834.jpg 834w, images/nhcssfunda2.jpg 1024w", sizes="(max-width:320px) 83vw, (max-width:560px) 88vw, (max-width:1210px) 92vw, 1122px", loading="lazy", class="lazyload")
       section.contenido
         h3 Introducción
         p En este artículo tomaremos un documento 
