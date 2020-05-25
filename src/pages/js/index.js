@@ -8,7 +8,7 @@ import { faTools } from '@fortawesome/free-solid-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5, faWindows } from '@fortawesome/free-brands-svg-icons';
 import { faCss3Alt } from '@fortawesome/free-brands-svg-icons';
 import { faJsSquare } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
@@ -27,156 +27,51 @@ library.add(faEnvelope);
 dom.watch();
 
 // Funcionalidad botón hamburgesa
-setTimeout(function () {
 
-    const movil = window.matchMedia('screen and (min-width: 100px) and (max-width: 730px)');
-    const boton = document.querySelector('#boton-menu');
-    const menu = document.querySelector('.menu');
+let movil = window.matchMedia('screen and (min-width: 100px) and (max-width: 730px)');
 
-    movil.addListener(validation);
+window.addEventListener('resize', recarga);
 
-    function validation(event){
-        if(event.matches){
-            boton.addEventListener('click', mostrarOcultarMenu);
-            boton.addEventListener('keydown', function(event){
-                let codigo = event.which || event.keyCode;
-                console.log(codigo);
-                if(codigo === 13) {
-                    mostrarOcultarMenu();
-                };
+function recarga() {
+    setTimeout(function(){
+        window.location.reload(true);
+    });
+};
+
+if(movil.matches){
+    document.addEventListener('DOMContentLoaded', () =>{
+        import('./simatches')
+            .then(f => {
+                f.simatches(movil);
             });
-        }else{
-            boton.removeEventListener('click', mostrarOcultarMenu)
-        }
-    }
+    })
+}
 
-    validation(movil);
-
-    function mostrarOcultarMenu(){
-        if(menu.classList.contains('is-active')){
-            menu.classList.remove('is-active');
-        }else{
-            menu.classList.add('is-active');
-        }
-    }
-
-},100)
-
-
-// Funcionalidad confirmación envío Formulario Subscripción
 setTimeout(function () {
-    let subscribe = document.getElementById('subscribe');
+
+    // Funcionalidad confirmación envío Formulario Subscripción
+
     let subscribirme = document.getElementById('subscribirme');
-    let confirma = document.getElementById('confirma');
 
-    subscribirme.addEventListener('click', confirmarEnvio);
+    subscribirme.addEventListener('click', (event) => {
+        import('./subscription')
+            .then(f => {
+                f.confirmarEnvio(event);
+            });
+    });
 
+    // Funcionalidad confirmación envío Formulario Comentario
 
-    function confirmarEnvio(event) {
-        event.preventDefault();
-        let subscribes = subscribe.value;
-        if(subscribes === "") {
-            confirma.style.display = 'block';
-            confirma.style.color = 'red';
-            confirma.innerHTML = 'Introduce tu Correo Electrónico, por favor.';
-        }else if(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(subscribes)) {
-            confirma.style.display = 'block';
-            confirma.style.color = '#00ffd5';
-            confirma.innerHTML = 'E-mail enviado';
-        }else{
-            confirma.style.display = 'block';
-            confirma.style.color = 'red';
-            confirma.innerHTML = 'Introduce un Correo Electrónico valido, por favor.';
-        }
-        setTimeout(function () {
-            confirma.style.display = 'none';
-            subscribe.value = '';
-        },4000)
-    }
-},10)
-
-
-
-// Funcionalidad confirmación envío Formulario Comentario
-setTimeout(function () {
-    let nombre = document.getElementById('nombre');
-    let email = document.getElementById('email');
-    let comentario = document.getElementById('comentario');
     let submit = document.getElementById('submit');
-    let confirmNombre = document.getElementById('confirmNombre');
-    let confirmEmail = document.getElementById('confirmEmail');
-    let confirmText = document.getElementById('confirmText');
-    let confirmForm = document.getElementById('confirmForm');
-    let emailCorrecto = false;
 
-    submit.addEventListener('click',confirmEnvio);
+    submit.addEventListener('click', (event) => {
+        import('./coment')
+            .then(f => {
+                f.confirmEnvio(event);
+            });
+    });
 
-
-    function confirmEnvio(event) {
-        event.preventDefault();
-        let nombres = nombre.value;
-        let emails = email.value;
-        let comentarios = comentario.value;
-
-        if(nombres === ""){
-            confirmNombre.style.display = 'block';
-            confirmNombre.style.color = 'red';
-            confirmNombre.innerHTML = 'Introduce tu Nombre, por favor.';
-
-            setTimeout(function () {
-                confirmNombre.style.display = 'none';
-                nombre.value = '';
-            },5000)
-        }
-        if(emails === ""){
-            confirmEmail.style.display = 'block';
-            confirmEmail.style.color = 'red';
-            confirmEmail.innerHTML = 'Introduce tu Correo Electrónico, por favor.';
-
-            setTimeout(function () {
-                confirmEmail.style.display = 'none';
-                email.value = '';
-            },5000)
-        }else if(/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(emails)) {
-            emailCorrecto = true;
-        }else{
-            confirmEmail.style.display = 'block';
-            confirmEmail.style.color = 'red';
-            confirmEmail.innerHTML = 'Introduce un Correo Electrónico valido, por favor.';
-
-            setTimeout(function () {
-                confirmEmail.style.display = 'none';
-                email.value = '';
-            },5000)
-        }
-        if(comentarios === ""){
-            confirmText.style.display = 'block';
-            confirmText.style.color = 'red';
-            confirmText.innerHTML = 'Introduce tus Comentarios, por favor.';
-
-            setTimeout(function () {
-                confirmText.style.display = 'none';
-                comentario.value = '';
-            },5000)
-        }
-        if(nombres != "" && emails != "" && emailCorrecto && comentarios != "") {
-            confirmForm.style.display = 'block';
-            confirmForm.style.color = '#00ff00';
-            confirmForm.innerHTML = 'Comentario enviado';
-
-            setTimeout(function () {
-                confirmForm.style.display = 'none';
-                
-                nombre.value = '';
-                email.value = '';
-                comentario.value = '';
-                emailCorrecto = false;
-            },5000)
-        }
-
-    }
-},10)
-
+},0);
 
 $(document).ready(function () {
 
