@@ -1,4 +1,5 @@
 :root {
+  /* !Critical */
   --fondo: aliceblue;
   --fondo-footer: #555;
   --texto: #333;
@@ -29,6 +30,7 @@
 @custom-media --extrabig only screen and (min-width: 1600px);
 
 * {
+  /* !Critical */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -39,11 +41,13 @@
 }
 
 html {
+  /* !Critical */
   font-size: 10px;
   width: 100%;
 }
 
 body {
+  /* !Critical */
     background-color: var(--fondo);
     color: var(--texto);
     font-family: var(--font-base);
@@ -52,6 +56,7 @@ body {
 }
 
 .no-visible {
+  /* !Critical */
     position: absolute;
     width: 1px;
     height: 1px;
@@ -60,6 +65,7 @@ body {
 }
 
 .btn-volver-arriba {
+  /* !Critical */
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -73,6 +79,7 @@ body {
   transition: all .4s ease;
 
   & #volverArriba {
+    /* !Critical */
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -91,6 +98,7 @@ body {
 }
 
 .header {
+  /* !Critical */
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -99,19 +107,23 @@ body {
   align-items: center;
 
   & .contenedor-slider {
+    /* !Critical */
     width: 100%;
     overflow: hidden;
     position: relative;
 
     & .slider {
+      /* !Critical */
       width: 400%;
       display: flex;
 
       & .slide {
+        /* !Critical */
         width: 25%;
         box-shadow: 0px 20px 40px #aaa;
 
         & img {
+          /* !Critical */
           min-width: 100vw;
           height: 100vh;
           vertical-align: top;
@@ -120,6 +132,7 @@ body {
     }
 
     & .btn-anterior, & .btn-siguiente {
+      /* !Critical */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -134,6 +147,7 @@ body {
       z-index: 999;
 
       & .fa-arrow-left, & .fa-arrow-right {
+        /* !Critical */
         color: white;
       }
 
@@ -145,15 +159,18 @@ body {
     }
 
     & .btn-anterior {
+      /* !Critical */
       left: 2%;
     }
 
     & .btn-siguiente {
+      /* !Critical */
       right: 2%;
     }
   }
 
   & .fa-bars.icon-menu.burguer-boton {
+    /* !Critical */
     color: var(--fondo);
     display: block;
     width: 4rem;
@@ -168,11 +185,13 @@ body {
     font-size: 3rem;
 
     @media (--medium) {
+      /* !Critical */
       display: none;
     }
   }
 
   & p, & h1 {
+    /* !Critical */
     color: var(--fondo);
     font-size: var(--font-hero);
     text-shadow: 4px 4px 6px var(--texto);
@@ -181,42 +200,50 @@ body {
   }
 
   & h1 {
+    /* !Critical */
     top: 30%;
     transform: translateY(-30%);
     animation: entradah1 2s ease-in-out;
 
     @media (--small) {
+      /* !Critical */
       top: 35%;
       transform: translateY(-35%);
     }
 
     @media (--medium) {
+      /* !Critical */
       top: 40%;
       transform: translateY(-40%);
     }
 
     @media (--big) {
+      /* !Critical */
       top: 45%;
       transform: translateY(-45%);
     }
   }
 
   & p {
+    /* !Critical */
     top: 70%;
     transform: translateY(-70%);
     animation: entradap 2.8s ease-in-out;
 
     @media (--small) {
+      /* !Critical */
       top: 65%;
       transform: translateY(-65%);
     }
 
     @media (--medium) {
+      /* !Critical */
       top: 60%;
       transform: translateY(-60%);
     }
 
     @media (--big) {
+      /* !Critical */
       top: 55%;
       transform: translateY(-55%);
     }
@@ -224,6 +251,7 @@ body {
 }
 
 @keyframes entradah1 {
+  /* !Critical */
   0% {
     margin-left: -100%;
     width: 300%;
@@ -235,6 +263,7 @@ body {
 }
 
 @keyframes entradap {
+  /* !Critical */
   0% {
     margin-left: 100%;
     width: 300%;
@@ -389,6 +418,7 @@ body {
 a, 
 a:link, 
 a:visited {
+  /* !Critical */
   text-decoration: none;
   border-bottom: 2px solid var(--texto);
   color: var(--texto);
@@ -465,6 +495,7 @@ h2 {
 }
 
 p {
+  /* !Critical */
   padding: 1rem 2rem;
   text-align: center;
   max-width: 119rem;
@@ -665,6 +696,7 @@ p {
         }
 
         & .confirma {
+          /* !Critical */
           display: none;
           font-size: 2rem;
           font-weight: bold;
