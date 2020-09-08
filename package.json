@@ -27,7 +27,8 @@
     "parcel-plugin-lazy": "0.0.4",
     "postcss-preset-env": "^6.7.0",
     "pug": "^2.0.4",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "bl": ">=2.2.1"
   },
   "dependencies": {
     "jquery": "^3.5.0"
